@@ -34,10 +34,6 @@
 		CF4B7DBC1D3BD3F5004FB156 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4B7DBB1D3BD3F5004FB156 /* SWRevealViewController.m */; };
 		CF54DC621E50C6ED004A944E /* JPMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54DC611E50C6ED004A944E /* JPMap.swift */; };
 		CF5BADCE1EA90BAD001BDB39 /* MassageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADCD1EA90BAD001BDB39 /* MassageView.swift */; };
-		CF5BADD01EA9622F001BDB39 /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADCF1EA9622F001BDB39 /* ExpandableTableView.swift */; };
-		CF5BADD31EA9655F001BDB39 /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADD11EA9655F001BDB39 /* ExpandableTableViewCell.swift */; };
-		CF5BADD41EA9655F001BDB39 /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5BADD21EA9655F001BDB39 /* ExpandableTableViewCell.xib */; };
-		CF5BADD61EA9673F001BDB39 /* ExpandableTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADD51EA9673F001BDB39 /* ExpandableTableViewHeader.swift */; };
 		CF5BADDB1EAAD6A9001BDB39 /* UsefullInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADD91EAAD6A9001BDB39 /* UsefullInformationViewController.swift */; };
 		CF5BADDC1EAAD6A9001BDB39 /* UsefullInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5BADDA1EAAD6A9001BDB39 /* UsefullInformationViewController.xib */; };
 		CF5BADE01EABF1F7001BDB39 /* FacilityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5BADDE1EABF1F7001BDB39 /* FacilityMapViewController.swift */; };
@@ -53,6 +49,10 @@
 		CF6B58D71D847B9D0006441D /* MenuButtonArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6B58D61D847B9D0006441D /* MenuButtonArrow.swift */; };
 		CF6CDB271E3BAFB4007A8678 /* TextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6CDB261E3BAFB4007A8678 /* TextAttachment.swift */; };
 		CF74541E1D3E4AF4008D8B15 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74541D1D3E4AF4008D8B15 /* InformationController.swift */; };
+		CF7AC7A01EB676D200DD7C3A /* ExpandableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AC79C1EB676D200DD7C3A /* ExpandableTableView.swift */; };
+		CF7AC7A11EB676D200DD7C3A /* ExpandableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AC79D1EB676D200DD7C3A /* ExpandableTableViewCell.swift */; };
+		CF7AC7A21EB676D200DD7C3A /* ExpandableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7AC79E1EB676D200DD7C3A /* ExpandableTableViewCell.xib */; };
+		CF7AC7A31EB676D200DD7C3A /* ExpandableTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AC79F1EB676D200DD7C3A /* ExpandableTableViewHeader.swift */; };
 		CF86391A1D2D24F900B126D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8639191D2D24F900B126D4 /* AppDelegate.swift */; };
 		CF8639211D2D24F900B126D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8639201D2D24F900B126D4 /* Assets.xcassets */; };
 		CF8639241D2D24F900B126D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8639221D2D24F900B126D4 /* LaunchScreen.storyboard */; };
@@ -141,10 +141,6 @@
 		CF4B7DBB1D3BD3F5004FB156 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Add-Ons/SWRevealViewController.m"; sourceTree = "<group>"; };
 		CF54DC611E50C6ED004A944E /* JPMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPMap.swift; sourceTree = "<group>"; };
 		CF5BADCD1EA90BAD001BDB39 /* MassageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageView.swift; sourceTree = "<group>"; };
-		CF5BADCF1EA9622F001BDB39 /* ExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableView.swift; sourceTree = "<group>"; };
-		CF5BADD11EA9655F001BDB39 /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCell.swift; sourceTree = "<group>"; };
-		CF5BADD21EA9655F001BDB39 /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpandableTableViewCell.xib; sourceTree = "<group>"; };
-		CF5BADD51EA9673F001BDB39 /* ExpandableTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewHeader.swift; sourceTree = "<group>"; };
 		CF5BADD91EAAD6A9001BDB39 /* UsefullInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsefullInformationViewController.swift; sourceTree = "<group>"; };
 		CF5BADDA1EAAD6A9001BDB39 /* UsefullInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsefullInformationViewController.xib; sourceTree = "<group>"; };
 		CF5BADDE1EABF1F7001BDB39 /* FacilityMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilityMapViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +156,10 @@
 		CF6B58D61D847B9D0006441D /* MenuButtonArrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonArrow.swift; sourceTree = "<group>"; };
 		CF6CDB261E3BAFB4007A8678 /* TextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttachment.swift; sourceTree = "<group>"; };
 		CF74541D1D3E4AF4008D8B15 /* InformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
+		CF7AC79C1EB676D200DD7C3A /* ExpandableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandableTableView.swift; path = "Expandable Table View/ExpandableTableView.swift"; sourceTree = "<group>"; };
+		CF7AC79D1EB676D200DD7C3A /* ExpandableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewCell.swift; path = "Expandable Table View/ExpandableTableViewCell.swift"; sourceTree = "<group>"; };
+		CF7AC79E1EB676D200DD7C3A /* ExpandableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpandableTableViewCell.xib; path = "Expandable Table View/ExpandableTableViewCell.xib"; sourceTree = "<group>"; };
+		CF7AC79F1EB676D200DD7C3A /* ExpandableTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewHeader.swift; path = "Expandable Table View/ExpandableTableViewHeader.swift"; sourceTree = "<group>"; };
 		CF8639161D2D24F900B126D4 /* ViraVira-Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ViraVira-Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8639191D2D24F900B126D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF8639201D2D24F900B126D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -360,9 +360,21 @@
 			name = Information;
 			sourceTree = "<group>";
 		};
+		CF7AC79B1EB6766600DD7C3A /* Expandable Table View */ = {
+			isa = PBXGroup;
+			children = (
+				CF7AC79C1EB676D200DD7C3A /* ExpandableTableView.swift */,
+				CF7AC79D1EB676D200DD7C3A /* ExpandableTableViewCell.swift */,
+				CF7AC79E1EB676D200DD7C3A /* ExpandableTableViewCell.xib */,
+				CF7AC79F1EB676D200DD7C3A /* ExpandableTableViewHeader.swift */,
+			);
+			name = "Expandable Table View";
+			sourceTree = "<group>";
+		};
 		CF86390D1D2D24F900B126D4 = {
 			isa = PBXGroup;
 			children = (
+				CF7AC79B1EB6766600DD7C3A /* Expandable Table View */,
 				CF6B58D51D847B760006441D /* Animations */,
 				CFD7EEBF1D3A8015002DEA14 /* Extensions */,
 				CF4848531D2D5B3000840E57 /* SWRevealViewController */,
@@ -400,10 +412,6 @@
 				CFEF1DF01D3AD3900050357F /* Follow Us */,
 				CFEA78991E7483DA00C45A82 /* Settings */,
 				CF8639201D2D24F900B126D4 /* Assets.xcassets */,
-				CF5BADCF1EA9622F001BDB39 /* ExpandableTableView.swift */,
-				CF5BADD11EA9655F001BDB39 /* ExpandableTableViewCell.swift */,
-				CF5BADD51EA9673F001BDB39 /* ExpandableTableViewHeader.swift */,
-				CF5BADD21EA9655F001BDB39 /* ExpandableTableViewCell.xib */,
 			);
 			path = "ViraVira-Info";
 			sourceTree = "<group>";
@@ -692,10 +700,10 @@
 				CF5BADE11EABF1F7001BDB39 /* FacilityMapViewController.xib in Resources */,
 				CF20370B1EA7D51C00B11DB7 /* Massage.xib in Resources */,
 				CF5BADF01EAC2759001BDB39 /* PillowMenuViewController.xib in Resources */,
-				CF5BADD41EA9655F001BDB39 /* ExpandableTableViewCell.xib in Resources */,
 				CF8639241D2D24F900B126D4 /* LaunchScreen.storyboard in Resources */,
 				CF350E2E1E9AC17100949761 /* WellnessViewController.xib in Resources */,
 				CF5BADE61EABFCCD001BDB39 /* RoomServiceViewController.xib in Resources */,
+				CF7AC7A21EB676D200DD7C3A /* ExpandableTableViewCell.xib in Resources */,
 				CF2037091EA6C9E900B11DB7 /* WellnessTableViewCell.xib in Resources */,
 				CF5BADEA1EAC02DC001BDB39 /* MinibarViewController.xib in Resources */,
 				CFDC93461E421B1F00615C0E /* ImageGallaryCollectionViewCell.xib in Resources */,
@@ -844,7 +852,6 @@
 			files = (
 				CFD03B921EA036E400A4A0E5 /* WellnessSection.swift in Sources */,
 				CF74541E1D3E4AF4008D8B15 /* InformationController.swift in Sources */,
-				CF5BADD31EA9655F001BDB39 /* ExpandableTableViewCell.swift in Sources */,
 				CF5BADE91EAC02DC001BDB39 /* MinibarViewController.swift in Sources */,
 				CF5BADEF1EAC2759001BDB39 /* PillowMenuViewController.swift in Sources */,
 				CF27929D1E325EC400805C19 /* ExcursionImageDescription.swift in Sources */,
@@ -854,6 +861,7 @@
 				CFB4E0E71E649534007217F0 /* FollowUsTableViewCell.swift in Sources */,
 				CF6B58D71D847B9D0006441D /* MenuButtonArrow.swift in Sources */,
 				CFEA789B1E74841B00C45A82 /* SettingsTableViewController.swift in Sources */,
+				CF7AC7A11EB676D200DD7C3A /* ExpandableTableViewCell.swift in Sources */,
 				CF5BADE01EABF1F7001BDB39 /* FacilityMapViewController.swift in Sources */,
 				CFE4DF221E4D0B60000D07D6 /* MapParser.swift in Sources */,
 				CF442BE21E67127E006F8C6D /* UITextView.swift in Sources */,
@@ -886,9 +894,9 @@
 				CFD03B941EA1167500A4A0E5 /* WellnessHeaderView.swift in Sources */,
 				CFC937411D89B02B00BAE217 /* MenuButtonCross.swift in Sources */,
 				CFEA789D1E7AD88D00C45A82 /* JPMath.swift in Sources */,
-				CF5BADD01EA9622F001BDB39 /* ExpandableTableView.swift in Sources */,
 				CF48485D1D2D65BC00840E57 /* Constants.swift in Sources */,
 				CFEEFB7B1E14113A00A9E240 /* ExcursionHeader.swift in Sources */,
+				CF7AC7A01EB676D200DD7C3A /* ExpandableTableView.swift in Sources */,
 				CF350E291E9AB82400949761 /* InfoTableViewCell.swift in Sources */,
 				CF5BADCE1EA90BAD001BDB39 /* MassageView.swift in Sources */,
 				CFE001101D2FAB5C003C4441 /* Time.swift in Sources */,
@@ -904,9 +912,9 @@
 				CF5EBE571E1D615400B99476 /* WeatherController.swift in Sources */,
 				CFE12A1F1E2403E9008A27B0 /* WeatherTableViewCell.swift in Sources */,
 				CF86391A1D2D24F900B126D4 /* AppDelegate.swift in Sources */,
-				CF5BADD61EA9673F001BDB39 /* ExpandableTableViewHeader.swift in Sources */,
 				CFD58F2F1DE3445700B8AA38 /* CALayer.swift in Sources */,
 				CFC9373F1D89AD9800BAE217 /* MenuButtonArrowNoStick.swift in Sources */,
+				CF7AC7A31EB676D200DD7C3A /* ExpandableTableViewHeader.swift in Sources */,
 				CFEB23771D611F0900289D5E /* ExcursionTableCell.swift in Sources */,
 				CF350E2D1E9AC17100949761 /* WellnessViewController.swift in Sources */,
 				CF5BADDB1EAAD6A9001BDB39 /* UsefullInformationViewController.swift in Sources */,
