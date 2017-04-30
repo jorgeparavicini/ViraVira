@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MinibarViewController" customModule="ViraVira_Info" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="CZ0-Re-JfO" id="CIQ-pj-W9x"/>
+                <outlet property="view" destination="V5y-Y3-EFj" id="ozx-o2-T7u"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="V5y-Y3-EFj">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1o-fq-MC2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZ0-Re-JfO">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="655.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prices" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-nV-gdh">
+                                    <rect key="frame" x="16" y="16" width="343" height="27"/>
+                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Softdrinks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQO-sM-oxo">
+                                    <rect key="frame" x="16" y="75" width="343" height="27"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola, Sprite" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD7-nD-bMO">
+                                    <rect key="frame" x="16" y="118" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 7" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1O-s4-jxb">
+                                    <rect key="frame" x="16" y="147" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUV-Th-vzA">
+                                    <rect key="frame" x="16" y="200" width="343" height="27"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corona Extra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYj-97-3uH">
+                                    <rect key="frame" x="16" y="243" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHZ-bB-WeW">
+                                    <rect key="frame" x="16" y="272" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDb-Dg-6Uh">
+                                    <rect key="frame" x="16" y="325" width="343" height="27"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viña J Bouchon, Sauvignon Blanc, Valle del Maule, Reserva 2015, 90 Pts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srU-zM-YbK">
+                                    <rect key="frame" x="16" y="368" width="343" height="41.5"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 23" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-MO-kT2">
+                                    <rect key="frame" x="16" y="417.5" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viña De Martino, Legado, D.O. Valle del Maipo, Cabernet Sauvignon, Gran Reserva, 2012" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxu-Gt-eS8">
+                                    <rect key="frame" x="16" y="454.5" width="343" height="62"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 23" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sk-ET-2ns">
+                                    <rect key="frame" x="16" y="524.5" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All items in the minibar are complimentary for our All-inclusive guests." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-tM-5Af">
+                                    <rect key="frame" x="16" y="577.5" width="343" height="62"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="O5F-tM-5Af" firstAttribute="top" secondItem="4sk-ET-2ns" secondAttribute="bottom" constant="32" id="2DU-21-0ld"/>
+                                <constraint firstItem="xD7-nD-bMO" firstAttribute="top" secondItem="ZQO-sM-oxo" secondAttribute="bottom" constant="16" id="5KM-Qy-SaU"/>
+                                <constraint firstItem="ZQO-sM-oxo" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="5ih-jG-iGk"/>
+                                <constraint firstItem="ZQO-sM-oxo" firstAttribute="top" secondItem="Mfb-nV-gdh" secondAttribute="bottom" constant="32" id="7IP-It-yHY"/>
+                                <constraint firstItem="rHZ-bB-WeW" firstAttribute="top" secondItem="VYj-97-3uH" secondAttribute="bottom" constant="8" id="7St-Ra-SfC"/>
+                                <constraint firstItem="4sk-ET-2ns" firstAttribute="top" secondItem="nxu-Gt-eS8" secondAttribute="bottom" constant="8" id="8E0-xD-jb5"/>
+                                <constraint firstItem="VYj-97-3uH" firstAttribute="top" secondItem="FUV-Th-vzA" secondAttribute="bottom" constant="16" id="8qn-Un-695"/>
+                                <constraint firstAttribute="trailing" secondItem="srU-zM-YbK" secondAttribute="trailing" constant="16" id="8wm-N1-X5r"/>
+                                <constraint firstItem="xDb-Dg-6Uh" firstAttribute="top" secondItem="rHZ-bB-WeW" secondAttribute="bottom" constant="32" id="AL5-LO-qeH"/>
+                                <constraint firstAttribute="trailing" secondItem="O5F-tM-5Af" secondAttribute="trailing" constant="16" id="Bor-y7-Ec3"/>
+                                <constraint firstAttribute="trailing" secondItem="rHZ-bB-WeW" secondAttribute="trailing" constant="16" id="Bxm-4s-QTA"/>
+                                <constraint firstItem="FUV-Th-vzA" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="DzH-5h-c14"/>
+                                <constraint firstItem="xDb-Dg-6Uh" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="F4Q-It-u25"/>
+                                <constraint firstItem="xD7-nD-bMO" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="Ffo-hg-eNk"/>
+                                <constraint firstAttribute="trailing" secondItem="Mfb-nV-gdh" secondAttribute="trailing" constant="16" id="HYh-fr-JqR"/>
+                                <constraint firstItem="p1O-s4-jxb" firstAttribute="top" secondItem="xD7-nD-bMO" secondAttribute="bottom" constant="8" id="HhV-rP-UnX"/>
+                                <constraint firstAttribute="trailing" secondItem="p1O-s4-jxb" secondAttribute="trailing" constant="16" id="Pad-cm-YjV"/>
+                                <constraint firstItem="FUV-Th-vzA" firstAttribute="top" secondItem="p1O-s4-jxb" secondAttribute="bottom" constant="32" id="Pfe-56-XCf"/>
+                                <constraint firstItem="rHZ-bB-WeW" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="QoL-oA-Rym"/>
+                                <constraint firstItem="VYj-97-3uH" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="Spc-tb-6nM"/>
+                                <constraint firstItem="nxu-Gt-eS8" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="U0m-Ju-3QD"/>
+                                <constraint firstAttribute="trailing" secondItem="VYj-97-3uH" secondAttribute="trailing" constant="16" id="aDn-XL-uCJ"/>
+                                <constraint firstAttribute="trailing" secondItem="xDb-Dg-6Uh" secondAttribute="trailing" constant="16" id="bDv-kG-Is5"/>
+                                <constraint firstItem="L7p-MO-kT2" firstAttribute="top" secondItem="srU-zM-YbK" secondAttribute="bottom" constant="8" id="bg2-E4-uLb"/>
+                                <constraint firstAttribute="trailing" secondItem="FUV-Th-vzA" secondAttribute="trailing" constant="16" id="co6-8x-n1f"/>
+                                <constraint firstItem="L7p-MO-kT2" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="dbm-uD-Cjy"/>
+                                <constraint firstItem="nxu-Gt-eS8" firstAttribute="top" secondItem="L7p-MO-kT2" secondAttribute="bottom" constant="16" id="fbe-Aw-PzE"/>
+                                <constraint firstAttribute="trailing" secondItem="nxu-Gt-eS8" secondAttribute="trailing" constant="16" id="fmS-dS-TBg"/>
+                                <constraint firstItem="p1O-s4-jxb" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="gJE-rW-ybe"/>
+                                <constraint firstItem="O5F-tM-5Af" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="jQl-o1-0sN"/>
+                                <constraint firstItem="srU-zM-YbK" firstAttribute="top" secondItem="xDb-Dg-6Uh" secondAttribute="bottom" constant="16" id="lQL-Bj-Hz2"/>
+                                <constraint firstItem="Mfb-nV-gdh" firstAttribute="top" secondItem="CZ0-Re-JfO" secondAttribute="top" constant="16" id="lfs-1L-268"/>
+                                <constraint firstAttribute="trailing" secondItem="ZQO-sM-oxo" secondAttribute="trailing" constant="16" id="nIC-kn-zcm"/>
+                                <constraint firstItem="4sk-ET-2ns" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="oUA-lC-aer"/>
+                                <constraint firstAttribute="trailing" secondItem="xD7-nD-bMO" secondAttribute="trailing" constant="16" id="qHF-Xy-3rm"/>
+                                <constraint firstAttribute="bottom" secondItem="O5F-tM-5Af" secondAttribute="bottom" constant="16" id="qyp-Ga-j1p"/>
+                                <constraint firstItem="srU-zM-YbK" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="u32-Fe-IOX"/>
+                                <constraint firstAttribute="trailing" secondItem="4sk-ET-2ns" secondAttribute="trailing" constant="16" id="uDC-ZO-coZ"/>
+                                <constraint firstAttribute="trailing" secondItem="L7p-MO-kT2" secondAttribute="trailing" constant="16" id="xFp-XY-lqh"/>
+                                <constraint firstItem="Mfb-nV-gdh" firstAttribute="leading" secondItem="CZ0-Re-JfO" secondAttribute="leading" constant="16" id="y77-fh-6WB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="CZ0-Re-JfO" secondAttribute="trailing" id="DOP-Db-w4s"/>
+                        <constraint firstAttribute="bottom" secondItem="CZ0-Re-JfO" secondAttribute="bottom" id="EMg-lH-lb3"/>
+                        <constraint firstItem="CZ0-Re-JfO" firstAttribute="top" secondItem="n1o-fq-MC2" secondAttribute="top" id="HZX-52-yih"/>
+                        <constraint firstItem="CZ0-Re-JfO" firstAttribute="leading" secondItem="n1o-fq-MC2" secondAttribute="leading" id="Pyg-I6-yuH"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="n1o-fq-MC2" secondAttribute="trailing" id="0cq-l1-T5V"/>
+                <constraint firstItem="CZ0-Re-JfO" firstAttribute="width" secondItem="V5y-Y3-EFj" secondAttribute="width" id="5gu-Tm-RgB"/>
+                <constraint firstItem="n1o-fq-MC2" firstAttribute="leading" secondItem="V5y-Y3-EFj" secondAttribute="leading" id="H45-xg-6gQ"/>
+                <constraint firstAttribute="bottom" secondItem="n1o-fq-MC2" secondAttribute="bottom" id="bH7-v1-x6C"/>
+                <constraint firstItem="n1o-fq-MC2" firstAttribute="top" secondItem="V5y-Y3-EFj" secondAttribute="top" id="yYF-AM-ZgD"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
