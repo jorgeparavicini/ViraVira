@@ -12,6 +12,20 @@ import KVConstraintExtensionsMaster
 class UsefullInformationViewController: UIViewController {
 
     @IBOutlet weak var tableView: ExpandableTableView!
+	
+	var labelFontSize: CGFloat {
+		get {
+			switch (self.view.traitCollection.horizontalSizeClass, self.view.traitCollection.verticalSizeClass) {
+			case (.regular, .regular):
+				return 24
+			case (.compact, .compact):
+				return 17
+				
+			default:
+				return 17
+			}
+		}
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +127,7 @@ class UsefullInformationViewController: UIViewController {
 		label.textColor = UIColor.primary
 		label.textAlignment = .justified
 		label.numberOfLines = 0
+		label.font = label.font.withSize(labelFontSize)
 		
 		view.addSubview(label)
 		label.applyTopAndBottomPinConstraint(toSuperview: 16)

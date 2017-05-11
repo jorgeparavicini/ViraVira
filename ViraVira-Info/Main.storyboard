@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eKq-gr-0fV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eKq-gr-0fV">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -94,12 +94,14 @@
                                 <rect key="frame" x="0.0" y="64" width="1366" height="960"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-j1-fRk" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="2165"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="2374.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Hotel Vira Vira" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzF-ts-TsH">
-                                                <rect key="frame" x="8" y="8" width="1350" height="26"/>
+                                                <rect key="frame" x="8" y="8" width="1350" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="f6Y-Ic-WGt"/>
+                                                    <constraint firstAttribute="height" constant="32" id="f6Y-Ic-WGt">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="21"/>
                                                 <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,7 +111,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iau-n3-Cmq">
-                                                <rect key="frame" x="171" y="42" width="1024.5" height="117"/>
+                                                <rect key="frame" x="171" y="80" width="1024.5" height="117"/>
                                                 <string key="text">The Hacienda Hotel Vira Vira – Relais &amp; Châteaux is set in a beautiful and unique location close to Pucón, Chile. It features a 23ha native park along the shores of the Liucura River and offers an oasis of peace and recreation. The Vira Vira Hotel brings a new concept of vacation to life – we call it “The Elegance of Adventure”.</string>
                                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -119,53 +121,57 @@
                                                 </variation>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villa suites" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Mr-ozI">
-                                                <rect key="frame" x="8" y="167" width="1350" height="900"/>
+                                                <rect key="frame" x="8" y="205" width="1350" height="900"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ct6-Mr-ozI" secondAttribute="height" multiplier="3:2" id="R18-JM-WCH"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Elegance of Adventure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-2f-Fnf">
-                                                <rect key="frame" x="8" y="1083" width="1350" height="26"/>
+                                                <rect key="frame" x="8" y="1137" width="1350" height="48"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="26" id="3Ub-Ar-4hu"/>
+                                                    <constraint firstAttribute="height" constant="32" id="3Ub-Ar-4hu">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="48"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="21"/>
                                                 <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="37"/>
+                                                </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vira Vira Collage" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-hr-Ohv">
-                                                <rect key="frame" x="8" y="1257" width="1350" height="900"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="qSf-hr-Ohv" secondAttribute="height" multiplier="3:2" id="Cfp-Jk-7kX"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj8-co-dDP">
-                                                <rect key="frame" x="171" y="1117" width="1024.5" height="124"/>
-                                                <mutableString key="text">The “Elegance of Adventure” stands for personal hospitality coupled with unforgettable adventures and excursions. Our Hacienda Hotel offers a wealth of different adventures and excursions tailored to your specific interests. Every day you will meet with our excursion manager to discuss and set your next day activities. Some of our favorite activities include horse trekking in the Cordilleras, hiking in one of the many surrounding Natural Parks, skiing in winter or simply to spend a leisurely day sailing on the Lake Villarrica.
-All Adventures…</mutableString>
+                                                <rect key="frame" x="171" y="1217" width="1024.5" height="233.5"/>
+                                                <string key="text">The “Elegance of Adventure” stands for personal hospitality coupled with unforgettable adventures and excursions. Our Hacienda Hotel offers a wealth of different adventures and excursions tailored to your specific interests. Every day you will meet with our excursion manager to discuss and set your next day activities. Some of our favorite activities include horse trekking in the Cordilleras, hiking in one of the many surrounding Natural Parks, skiing in winter or simply to spend a leisurely day sailing on the Lake Villarrica.
+All Adventures…</string>
                                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                                 </variation>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vira Vira Collage" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-hr-Ohv">
+                                                <rect key="frame" x="8" y="1466.5" width="1350" height="900"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qSf-hr-Ohv" secondAttribute="height" multiplier="3:2" id="Cfp-Jk-7kX"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="1fB-2f-Fnf" firstAttribute="leading" secondItem="Ocd-j1-fRk" secondAttribute="leading" constant="8" id="1S8-5P-HH9"/>
                                             <constraint firstItem="NzF-ts-TsH" firstAttribute="leading" secondItem="Ocd-j1-fRk" secondAttribute="leading" constant="8" id="2sm-EX-ztj"/>
-                                            <constraint firstItem="1fB-2f-Fnf" firstAttribute="top" secondItem="Ct6-Mr-ozI" secondAttribute="bottom" constant="16" id="33Y-th-xSV"/>
                                             <constraint firstItem="qSf-hr-Ohv" firstAttribute="leading" secondItem="Ocd-j1-fRk" secondAttribute="leading" constant="8" id="5X9-Qo-lSg"/>
                                             <constraint firstAttribute="trailing" secondItem="1fB-2f-Fnf" secondAttribute="trailing" constant="8" id="5rL-Wn-66R"/>
                                             <constraint firstAttribute="trailing" secondItem="qSf-hr-Ohv" secondAttribute="trailing" constant="8" id="9da-sT-16F"/>
-                                            <constraint firstItem="iau-n3-Cmq" firstAttribute="top" secondItem="NzF-ts-TsH" secondAttribute="bottom" constant="8" id="CEJ-BN-FjK"/>
-                                            <constraint firstItem="1fB-2f-Fnf" firstAttribute="top" secondItem="Ct6-Mr-ozI" secondAttribute="bottom" constant="16" id="L45-Xo-26C"/>
+                                            <constraint firstItem="iau-n3-Cmq" firstAttribute="top" secondItem="NzF-ts-TsH" secondAttribute="bottom" constant="32" id="CEJ-BN-FjK"/>
+                                            <constraint firstItem="1fB-2f-Fnf" firstAttribute="top" secondItem="Ct6-Mr-ozI" secondAttribute="bottom" constant="32" id="L45-Xo-26C"/>
                                             <constraint firstItem="NzF-ts-TsH" firstAttribute="top" secondItem="Ocd-j1-fRk" secondAttribute="top" constant="8" id="Oqt-IE-8CZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Ct6-Mr-ozI" secondAttribute="trailing" constant="8" id="S4M-fl-HSH"/>
                                             <constraint firstAttribute="bottom" secondItem="qSf-hr-Ohv" secondAttribute="bottom" constant="8" id="gUa-Cg-Jvn"/>
                                             <constraint firstAttribute="trailing" secondItem="NzF-ts-TsH" secondAttribute="trailing" constant="8" id="irr-Oh-kOb"/>
                                             <constraint firstItem="Ct6-Mr-ozI" firstAttribute="top" secondItem="iau-n3-Cmq" secondAttribute="bottom" constant="8" id="l6d-Tn-iVU"/>
-                                            <constraint firstItem="Sj8-co-dDP" firstAttribute="top" secondItem="1fB-2f-Fnf" secondAttribute="bottom" constant="8" id="pMI-Hc-h2q"/>
+                                            <constraint firstItem="Sj8-co-dDP" firstAttribute="top" secondItem="1fB-2f-Fnf" secondAttribute="bottom" constant="32" id="pMI-Hc-h2q"/>
                                             <constraint firstItem="Ct6-Mr-ozI" firstAttribute="leading" secondItem="Ocd-j1-fRk" secondAttribute="leading" constant="8" id="rI7-qj-jmg"/>
                                             <constraint firstItem="qSf-hr-Ohv" firstAttribute="top" secondItem="Sj8-co-dDP" secondAttribute="bottom" constant="16" id="wvB-0Z-yoO"/>
                                         </constraints>
@@ -292,10 +298,13 @@ All Adventures…</mutableString>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjJ-PF-4mL">
-                                            <rect key="frame" x="24" y="8" width="74.5" height="34"/>
+                                            <rect key="frame" x="24" y="8" width="105" height="34"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                             <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                            </variation>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H2K-1E-oYE">
                                             <rect key="frame" x="8" y="25" width="0.0" height="0.0"/>
@@ -309,9 +318,12 @@ All Adventures…</mutableString>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="mCa-J3-aW8" secondAttribute="height" multiplier="1:1" id="dU2-k8-vAw"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -619,7 +631,7 @@ All Adventures…</mutableString>
                                 <rect key="frame" x="0.0" y="28" width="1366" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A44-r0-nJM" id="mFM-jo-sUl">
-                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="299"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP6-nc-bFG">
@@ -706,16 +718,16 @@ All Adventures…</mutableString>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vac-RT-5hg">
-                                <rect key="frame" x="0.0" y="0.0" width="1045" height="960"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1044.5" height="960"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-Ee-6Ra" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="1045" height="887"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1044.5" height="887"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLy-FR-UxK">
-                                                <rect key="frame" x="8" y="8" width="1029" height="480"/>
+                                                <rect key="frame" x="8" y="8" width="1028.5" height="480"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ksJ-qg-aeX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1029" height="480"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1028.5" height="480"/>
                                                         <color key="backgroundColor" red="0.1058823529" green="0.070588235289999995" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="m4E-3Y-j4D">
                                                             <size key="itemSize" width="50" height="50"/>
@@ -780,14 +792,14 @@ All Adventures…</mutableString>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7g-xK-xO7" userLabel="Separator">
-                                                <rect key="frame" x="12" y="496" width="1021" height="1"/>
+                                                <rect key="frame" x="12" y="496" width="1020.5" height="1"/>
                                                 <color key="backgroundColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="tgw-UG-Jsk"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn9-UU-YUS">
-                                                <rect key="frame" x="8" y="829" width="1029" height="50"/>
+                                                <rect key="frame" x="8" y="829" width="1028.5" height="50"/>
                                                 <color key="backgroundColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="8yE-wp-vDz"/>
@@ -801,7 +813,7 @@ All Adventures…</mutableString>
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SSU-tv-63J" customClass="DynamicUITableView" customModule="ViraVira_Info" customModuleProvider="target">
-                                                <rect key="frame" x="12" y="505" width="1021" height="147"/>
+                                                <rect key="frame" x="12" y="505" width="1020.5" height="147"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="147" id="qkP-5r-X2n"/>
@@ -811,7 +823,7 @@ All Adventures…</mutableString>
                                                         <rect key="frame" x="0.0" y="28" width="1021" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3P0-gD-eFD" id="sEM-Kg-De1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1021" height="100"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1021" height="99"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPd-ei-jbS">
@@ -849,7 +861,7 @@ All Adventures…</mutableString>
                                                 </prototypes>
                                             </tableView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="yF2-SQ-ONW">
-                                                <rect key="frame" x="130.5" y="660" width="784" height="161"/>
+                                                <rect key="frame" x="130.5" y="660" width="783.5" height="161"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, </string>
                                                 <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -965,7 +977,7 @@ All Adventures…</mutableString>
                                 <rect key="frame" x="0.0" y="28" width="1366" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7M-tn-4je" id="ceC-F6-XPN">
-                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1031,7 +1043,7 @@ All Adventures…</mutableString>
                                         <rect key="frame" x="0.0" y="28" width="1366" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXO-HQ-TZw" id="qMW-8T-VIa">
-                                            <rect key="frame" x="0.0" y="0.0" width="1366" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1366" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlR-0n-MTk">

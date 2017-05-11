@@ -66,6 +66,7 @@ class ExpandableTableView: UITableView, ExpandableTableViewHeaderDelegate {
 		
 		header.iconView.image = sections?[section].icon
 		header.titleLabel.text = sections?[section].name
+		header.titleLabel.font = header.titleLabel.font.withSize(headerFontSize())
 		header.arrowLabel.text = ">"
 		
 		
@@ -109,8 +110,6 @@ class ExpandableTableView: UITableView, ExpandableTableViewHeaderDelegate {
 			indexPaths.append(IndexPath(row: row, section: section))
 		}
 		
-		print(indexPaths)
-		
 		if collapsed {
 			self.deleteRows(at: indexPaths, with: .automatic)
 		} else {
@@ -119,6 +118,18 @@ class ExpandableTableView: UITableView, ExpandableTableViewHeaderDelegate {
 		
 		//self.reloadRows(at: indexPaths, with: .automatic)
 		self.endUpdates()
+	}
+	
+	func headerFontSize() -> CGFloat {
+		switch (self.traitCollection.horizontalSizeClass, self.traitCollection.verticalSizeClass) {
+		case(.regular, .regular):
+			return 24
+		case(.compact, .compact):
+			return 21
+			
+		default:
+			return 17
+		}
 	}
 	
 	

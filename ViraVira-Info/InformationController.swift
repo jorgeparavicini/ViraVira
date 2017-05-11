@@ -48,6 +48,8 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 			comesFromSegue = false
 		}
 		
+		
+		
 		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
 		
 		setColors()
@@ -101,7 +103,12 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 	}
 	
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return UIScreen.main.bounds.rectLength() * cellHeightMultiplier
+		switch (self.traitCollection.horizontalSizeClass, self.traitCollection.verticalSizeClass) {
+		case (UIUserInterfaceSizeClass.regular, UIUserInterfaceSizeClass.regular):
+			return 64
+		default:
+			return 32
+		}
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -130,12 +137,5 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 		default:
 			return nil
 		}
-	}
-	
-//	MARK: Sizing
-	
-	func fontSize() -> CGFloat {
-		let ratio: CGFloat = 18
-		return UIScreen.main.bounds.rectWidth() / ratio
 	}
 }

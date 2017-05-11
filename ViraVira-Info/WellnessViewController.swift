@@ -27,6 +27,20 @@ class WellnessViewController: UIViewController {
 	
 	var identifier: String = "cell"
 	
+	var labelFontSize: CGFloat {
+		get {
+			switch (self.view.traitCollection.horizontalSizeClass, self.view.traitCollection.verticalSizeClass) {
+			case (.regular, .regular):
+				return 24
+			case (.compact, .compact):
+				return 17
+				
+			default:
+				return 17
+			}
+		}
+	}
+	
 //	MARK: - System functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +96,7 @@ class WellnessViewController: UIViewController {
 		
 		label.textColor = UIColor.primary
 		label.textAlignment = .justified
+		label.font = label.font.withSize(labelFontSize)
 		view.addSubview(label)
 		label.applyTopAndBottomPinConstraint(toSuperview: 16)
 		label.applyCenterXPinConstraint(toSuperview: 0)
@@ -115,6 +130,7 @@ extension WellnessViewController: UITableViewDelegate, UITableViewDataSource {
 		
 		header.iconView.image = sections[section].icon
 		header.titleLabel.text = sections[section].name
+		header.titleLabel.font = header.titleLabel.font.withSize(headerFontSize())
 		header.arrowLabel.text = ">"
 		
 		
@@ -159,6 +175,17 @@ extension WellnessViewController: UITableViewDelegate, UITableViewDataSource {
 		return UITableViewAutomaticDimension
 	}
 	
+	func headerFontSize() -> CGFloat {
+		switch (self.view.traitCollection.horizontalSizeClass, self.view.traitCollection.verticalSizeClass) {
+		case(.regular, .regular):
+			return 24
+		case(.compact, .compact):
+			return 21
+			
+		default:
+			return 17
+		}
+	}
 }
 
 //MARK: -

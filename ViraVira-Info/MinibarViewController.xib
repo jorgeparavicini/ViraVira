@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,85 +23,124 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZ0-Re-JfO">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="655.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="651.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prices" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-nV-gdh">
-                                    <rect key="frame" x="16" y="16" width="343" height="27"/>
-                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                    <rect key="frame" x="16" y="16" width="343" height="26"/>
+                                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="27"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Softdrinks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQO-sM-oxo">
-                                    <rect key="frame" x="16" y="75" width="343" height="27"/>
-                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <rect key="frame" x="16" y="74" width="343" height="26"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coca Cola, Sprite" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xD7-nD-bMO">
-                                    <rect key="frame" x="16" y="118" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="116" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 7" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1O-s4-jxb">
-                                    <rect key="frame" x="16" y="147" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="145" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUV-Th-vzA">
-                                    <rect key="frame" x="16" y="200" width="343" height="27"/>
-                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <rect key="frame" x="16" y="198" width="343" height="26"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corona Extra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYj-97-3uH">
-                                    <rect key="frame" x="16" y="243" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="240" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHZ-bB-WeW">
-                                    <rect key="frame" x="16" y="272" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="269" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wine" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDb-Dg-6Uh">
-                                    <rect key="frame" x="16" y="325" width="343" height="27"/>
-                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="22"/>
+                                    <rect key="frame" x="16" y="322" width="343" height="26"/>
+                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viña J Bouchon, Sauvignon Blanc, Valle del Maule, Reserva 2015, 90 Pts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srU-zM-YbK">
-                                    <rect key="frame" x="16" y="368" width="343" height="41.5"/>
+                                    <rect key="frame" x="16" y="364" width="343" height="41.5"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 23" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-MO-kT2">
-                                    <rect key="frame" x="16" y="417.5" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="413.5" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viña De Martino, Legado, D.O. Valle del Maipo, Cabernet Sauvignon, Gran Reserva, 2012" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxu-Gt-eS8">
-                                    <rect key="frame" x="16" y="454.5" width="343" height="62"/>
+                                    <rect key="frame" x="16" y="450.5" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 23" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sk-ET-2ns">
-                                    <rect key="frame" x="16" y="524.5" width="343" height="21"/>
+                                    <rect key="frame" x="16" y="520.5" width="343" height="21"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All items in the minibar are complimentary for our All-inclusive guests." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-tM-5Af">
-                                    <rect key="frame" x="16" y="577.5" width="343" height="62"/>
+                                    <rect key="frame" x="16" y="573.5" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
+                                    </variation>
                                 </label>
                             </subviews>
                             <constraints>
