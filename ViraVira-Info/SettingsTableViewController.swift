@@ -29,7 +29,7 @@ class SettingsTableViewController: UITableViewController, SWRevealViewController
 			menuButton.animate(animationType: .Force_Close)
 			comesFromSegue = false
 		}
-		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
+		Menu.currentRootViewController = self
     }
 
     override func didReceiveMemoryWarning() {

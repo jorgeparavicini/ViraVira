@@ -50,7 +50,7 @@ class FollowUsViewController: UIViewController, SWRevealViewControllerDelegate, 
 			comesFromSegue = false
 		}
 		
-		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
+		Menu.currentRootViewController = self
 		
 		
 		
@@ -69,7 +69,7 @@ class FollowUsViewController: UIViewController, SWRevealViewControllerDelegate, 
 		
 		tableView.delegate = self
 		tableView.dataSource = self
-		
+		tableView.estimatedRowHeight = 75
 		
 		setColors()
     }
@@ -112,9 +112,10 @@ class FollowUsViewController: UIViewController, SWRevealViewControllerDelegate, 
 	}
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		let bounds = UIScreen.main.bounds
+		/*let bounds = UIScreen.main.bounds
 		let height = bounds.width > bounds.height ? bounds.width : bounds.height
-		return height * cellHeightMultiplier
+		return height * cellHeightMultiplier*/
+		return UITableViewAutomaticDimension
 	}
 	
 	//MARK: - Menu view data source

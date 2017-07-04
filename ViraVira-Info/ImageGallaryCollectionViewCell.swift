@@ -15,7 +15,7 @@ protocol ImageGallaryCollectionViewDelegate {
 
 class ImageGallaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
 
-	@IBOutlet weak var imageView: ARImageView!
+	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var scrollView: UIScrollView!
 	
 	var collectionView: ImageGallaryCollectionView?

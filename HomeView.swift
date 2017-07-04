@@ -11,10 +11,12 @@ import UIKit
 class HomeView: UIViewController, SWRevealViewControllerDelegate {
     //MARK: - Properties
 	
-	@IBOutlet weak var welcome: UILabel!
+    @IBOutlet weak var welcomeTitle: UILabel!
 	@IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var adventureTitle: UILabel!
 	@IBOutlet weak var adventureLabel: UILabel!
 	@IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var collage: UIImageView!
 	
 	var menuButton: UIButtonAnimation! = nil
 	
@@ -22,12 +24,7 @@ class HomeView: UIViewController, SWRevealViewControllerDelegate {
     
     @IBOutlet weak var navBar: UINavigationItem!
 	
-	@IBOutlet weak var footer: UIView!
-	@IBOutlet weak var viravira: UILabel!
-	@IBOutlet weak var date: UILabel!
-	
-	
-	
+	//TODO: Change View controller init(menubuttons)
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,58 +42,32 @@ class HomeView: UIViewController, SWRevealViewControllerDelegate {
 			comesFromSegue = false
 		}
 		
-		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
+		Menu.currentRootViewController = self
 		
-		//Navbar setup end
 		
-		//NotificationCenter.default.addObserver(self, selector: #selector(HomeView.rotate), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-		
-		//setTextSize()
-	//	updateTextViewSize()
-		
-		setColors()
-		date.text = formattedDate()
+		setAttributes()
     }
 	
-	/*func setTextSize() {
-		let font = textView.font
-		switch UIScreen.main.bounds.width {
-			//iPhone 4
-		default:
-			break
-		}
-	}*/
 	
 	func setColors() {
-		self.view.backgroundColor = UIColor.secondary
-		welcome.textColor = UIColor.primary
-		welcome.backgroundColor = UIColor.secondary
+		view.backgroundColor = UIColor.secondary
+		welcomeTitle.textColor = UIColor.primary
+		welcomeTitle.backgroundColor = UIColor.secondary
 		welcomeLabel.textColor = UIColor.primary
 		welcomeLabel.backgroundColor = UIColor.secondary
 		adventureLabel.textColor = UIColor.primary
 		imageView.backgroundColor = UIColor.secondary
-		footer.backgroundColor = UIColor.secondary.withAlphaComponent(UIColor.transparency)
-		viravira.textColor = UIColor.primary
-		date.textColor = UIColor.primary
 	}
 	
-	func formattedDate() -> String {
-		let formatter = DateFormatter()
-		let locale = NSLocale.current
-		formatter.locale = locale
-		let date = Date()
-		formatter.timeStyle = .none
-		formatter.dateStyle = .medium
-		
-		return formatter.string(from: date)
-	}
-	
-	func rotate() {
-		//The device rotated
+	func setAttributes() {
+		welcomeTitle.attributedText = NSAttributedString(string: welcomeTitle.text!, attributes: ViraViraFontAttributes.title)
+		adventureTitle.attributedText = NSAttributedString(string: adventureTitle.text!, attributes: ViraViraFontAttributes.title)
+		welcomeLabel.attributedText = NSAttributedString(string: welcomeLabel.text!, attributes: ViraViraFontAttributes.description)
+		adventureLabel.attributedText = NSAttributedString(string: adventureLabel.text!, attributes: ViraViraFontAttributes.description)
 	}
 	
 	func toggle(_ sender: AnyObject!) {
-		self.menuButton.animate(animationType: .Automatic)
+		menuButton.animate(animationType: .Automatic)
 	}
 	
 	func revealController(_ revealController: SWRevealViewController!, willMoveTo position: FrontViewPosition) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
+class WeatherCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	static let cellIdentifier = "WeatherCell"
 	var weatherDay: WeatherDay? {
 		didSet {
@@ -35,13 +35,13 @@ class WeatherCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
 		
 		let weatherModel = weatherDay!.weatherModels[indexPath.item]
 		
-		cell.timeStamp.text = weatherModel.timeStamp()
+		cell.timeStamp.attributedText = NSAttributedString(string: weatherModel.timeStamp(), attributes: ViraViraFontAttributes.smallInfo)
 		
 		var tempUnit = Weather.TemperatureUnits.Celsius
 		if controllerView != nil {
 			tempUnit = controllerView!.tempUnit
 		}
-		cell.temperature.text = "\(weatherModel.temp(unit: tempUnit, roundToDecimal: 1))"
+		cell.temperature.attributedText = NSAttributedString(string: "\(weatherModel.temp(unit: tempUnit, roundToDecimal: 1))°", attributes: ViraViraFontAttributes.description)
 		cell.icon.image = weatherModel.icon
 		
 		setColors(for: cell)
@@ -56,5 +56,14 @@ class WeatherCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
 		cell.icon.tintColor = UIColor.primary
 		
 		self.backgroundColor = UIColor.clear
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		switch UIScreen.traits {
+		case (.regular, .regular):
+			return CGSize(width: 150, height: 150)
+		default:
+			return CGSize(width: 75, height: 75)
+		}
 	}
 }

@@ -11,7 +11,9 @@ target 'ViraVira-Info' do
 	pod 'SDWebImage', '~>3.8'
 	pod 'KVConstraintExtensionsMaster'
 	pod ‘SWXMLHash’, ‘~> 3.0.0’
+ 	pod 'AlamofireImage', '~> 3.1'
     pod 'DeviceKit', '~> 1.0'
+    pod 'Cache'
 
   target 'ViraVira-InfoTests' do
     inherit! :search_paths

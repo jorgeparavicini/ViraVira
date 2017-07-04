@@ -43,7 +43,7 @@ class SpaController: UIViewController, SWRevealViewControllerDelegate {
 		}
 		let appDelegate = UIApplication.shared.delegate as! AppDelegate
 		
-		appDelegate.currentViewController = self
+		Menu.currentRootViewController = self
 		
 		setColors()
 		
@@ -52,7 +52,7 @@ class SpaController: UIViewController, SWRevealViewControllerDelegate {
 		
 		let url = URL(string: "http://viraviraspa.appointy.com/")
 		
-		if appDelegate.spaWebView == nil {
+		/*if appDelegate.spaWebView == nil {
 			appDelegate.spaWebView = UIWebView()
 			self.automaticallyAdjustsScrollViewInsets = true
 			DispatchQueue.global().async {
@@ -66,7 +66,7 @@ class SpaController: UIViewController, SWRevealViewControllerDelegate {
 		self.view.addSubview(appDelegate.spaWebView!)
 		print(view.subviews.count)
 		
-		
+		*/
 		if let webView = webView {
 			print(webView.translatesAutoresizingMaskIntoConstraints)
 			webView.applyTopAndBottomPinConstraint(toSuperview: 0)

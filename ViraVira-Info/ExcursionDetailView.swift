@@ -22,7 +22,7 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 	}
 	
     @IBOutlet weak var excursionTitle: UINavigationItem!
-    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var descriptionView: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var separator: UIView!
 	
@@ -43,13 +43,12 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 	var mapProperties: JPMapProperty?
 	
 	//table view
-	@IBOutlet weak var tableView: DynamicUITableView!
-	@IBOutlet weak var tableHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableView: UIView!
+    
     
 	let tableCellHeightRatio: CGFloat = 0.1
     let tableIconHeightRatio: CGFloat = 0.07
-    
-    let descriptionTextInset: CGFloat = 8
     
     var tableCells = [ExcursionDetailTableViewCell]()
     
@@ -59,8 +58,8 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 		self.automaticallyAdjustsScrollViewInsets = false
 		
 		excursionTitle.title = excursion.title
-        descriptionText.text = excursion.m_description
-		updateTextViewSize()
+        descriptionView.text = excursion.description
+        setAttributes()
 		
 		//Creating the delegate links between the collection view and this class, so we can modify various aspects of the collectionview
         collectionView.delegate = self
@@ -96,24 +95,22 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 			mapButton.setTitle("Map: Coming soon", for: .normal)
 		}
 		
-		tableView.delegate = self
-		tableView.dataSource = self
-		tableView.isScrollEnabled = false
-		
 		
 		setColors()
 		selectText()
 		
+        
+        inserTableView()
 		/*tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.estimatedRowHeight = 40*/
 		//adjustTableViewHeight()
 		//updateTableHeight()
 	}
 	
-	override func viewDidLayoutSubviews() {
+	/*override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		updateHeight()
-	}
+	}*/
 	
 	//Updates all the views in the detail view to the according correct ones declared in UIColor
 	func setColors() {
@@ -130,17 +127,10 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 		
 		//tableView
 		tableView.backgroundColor = UIColor.clear
-		tableView.separatorColor = UIColor.primary
 	}
 	
-	override func viewWillLayoutSubviews() {
-		super.viewWillLayoutSubviews()
-		
-		let fixedWidth = descriptionText.frame.size.width
-		let newSize = descriptionText.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-		var newFrame = descriptionText.frame
-		newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-		descriptionText.frame = newFrame
+	func setAttributes() {
+		descriptionView.attributedText = NSAttributedString(string: descriptionView.text!, attributes: ViraViraFontAttributes.description)
 	}
 	
 //	MARK: - Collection view setup
@@ -155,14 +145,33 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
+	
+	func smallImageSize() -> CGSize {
+		return CGSize(width: 600, height: 600)
+	}
+	
+	func fullImageSize() -> CGSize {
+		return CGSize(width: 1200, height: 1200)
+	}
+	
+	func createURL(withImage image: String, width: CGFloat, height: CGFloat) -> URL {
+		let base = "https://hotelviravira.com/app/Images/getImage.php?"
+		let urlString = "\(base)image=\(image)&w=\(width)&h=\(height)"
+		let url = URL(string: urlString)
+		
+		assert(url != nil, "Invalid URL")
+		return url!
+	}
+	
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ImageGallaryCollectionViewCell
 		
 		if let images = excursion.images {
 			let imageURL = images[indexPath.item].0
+			let url = createURL(withImage: imageURL, width: smallImageSize().width, height: smallImageSize().height)
+			cell.imageView.tintColor = UIColor.primary
 			DispatchQueue.global().async {
-				cell.imageView.sd_setImage(with: imageURL, placeholderImage: #imageLiteral(resourceName: "PlaceHolder"))
+				cell.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "PlaceHolder").withRenderingMode(.alwaysTemplate))
 			}
         } else {
             cell.imageView.image = #imageLiteral(resourceName: "ImageNotFound")
@@ -230,16 +239,6 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 		//updateTableHeight()
        // tableView.reloadData()
        // adjustTableViewHeight()
-	}
-	
-//	MARK: - View translations
-	
-	func updateTextViewSize() {
-		let fixedWidth = descriptionText.frame.size.width
-		let newSize = descriptionText.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-		var newFrame = descriptionText.frame
-		newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-		descriptionText.frame = newFrame
 	}
 	
 //	MARK: - Image Inspector
@@ -324,7 +323,8 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 		if excursion.images != nil {
 			var images = [URL]()
 			for element in excursion.images! {
-				images.append(element.0)
+				let url = createURL(withImage: element.0, width: fullImageSize().width, height: fullImageSize().height)
+				images.append(url)
 			}
 			
 			collectionView.imageURLS = images
@@ -463,16 +463,149 @@ class ExcursionDetailView: UIViewController, UICollectionViewDataSource, UIColle
 		}
 	}
 	
+    
+    //MARK: - Tableview
+    
+    func inserTableView() {
+        guard excursion.tableContent != nil else {
+            tableView.applyHeightConstraint(0)
+            return
+        }
+        let view = createTable(tableContents: excursion.tableContent!)
+		view.translatesAutoresizingMaskIntoConstraints = false
+        tableView.addSubview(view)
+        view.applyConstraintFitToSuperview()
+    }
+    
+    func createTable(tableContents: [DetailTableContent]) -> UIView {
+        let tableView = UIView()
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        var views = [UIView]()
+        
+        for content in tableContents {
+            views.append(createCell(tableContent: content))
+        }
+		
+		for index in 0..<views.count {
+			let currentView = views[index]
+			tableView.addSubview(currentView)
+			
+			currentView.applyLeadingAndTrailingPinConstraint(toSuperview: 0)
+			
+			if index == 0 {
+				currentView.applyTopPinConstraint(toSuperview: 0)
+			} else {
+				NSLayoutConstraint(item: currentView, attribute: .top, relatedBy: .equal, toItem: views[(index - 1)], attribute: .bottom, multiplier: 1, constant: 8).isActive = true
+			}
+			
+			if index == (views.count - 1) {
+				currentView.applyBottomPinConstraint(toSuperview: 0)
+			}
+		}
+        
+        /*var viewsDict: [String: Any] = [:]
+        
+        for (index, view) in views.enumerated() {
+            tableView.addSubview(view)
+            if index == 0 {
+                view.applyTopPinConstraint(toSuperview: 0)
+            } else if index == (views.count - 1) {
+                view.applyBottomPinConstraint(toSuperview: 0)
+            }
+            
+            view.applyLeadingAndTrailingPinConstraint(toSuperview: 0)
+			
+			let asciiInt = index + 65
+			let char = Character(UnicodeScalar(asciiInt)!)
+            
+            viewsDict["\(char)"] = view
+        }
+        
+        for index in 0..<viewsDict.count {
+            
+            guard index != 0 else {continue}
+			
+			let firstIndex = Character(UnicodeScalar(index+65-1)!)
+			let secondIndex = Character(UnicodeScalar(index+65)!)
+            
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "V:|-[\(firstIndex)]-[\(secondIndex)]-|",
+                options: [],
+                metrics: nil,
+                views: viewsDict)
+        }*/
+        
+        return tableView
+    }
+    
+    func createCell(tableContent: DetailTableContent) -> UIView {
+        let view = UIView()
+		view.translatesAutoresizingMaskIntoConstraints = false
+		//view.backgroundColor = UIColor.green
+		
+        let image = UIImageView(image: tableContent.icon.withRenderingMode(.alwaysTemplate))
+		image.tintColor = UIColor.primary
+		image.translatesAutoresizingMaskIntoConstraints = false
+		
+        let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+        label.attributedText = NSAttributedString(string: tableContent.text, attributes: ViraViraFontAttributes.description)
+        label.numberOfLines = 0
+		
+		let separator = UIView()
+		separator.translatesAutoresizingMaskIntoConstraints = false
+		separator.backgroundColor = UIColor.primary
+		
+		let imageLabelView = UIView()
+		//imageLabelView.backgroundColor = UIColor.red
+		imageLabelView.translatesAutoresizingMaskIntoConstraints = false
+        
+        imageLabelView.addSubview(image)
+        imageLabelView.addSubview(label)
+		view.addSubview(imageLabelView)
+		view.addSubview(separator)
+		
+        
+        image.applyAspectRatioConstraint()
+		image.applyCenterYPinConstraint(toSuperview: 0)
+		
+		//image.applyTopAndBottomPinConstraint(toSuperview: 0)
+		image.applyLeadingPinConstraint(toSuperview: 0)
+		
+        label.applyTopAndBottomPinConstraint(toSuperview: 0)
+		label.applyTrailingPinConstraint(toSuperview: 0)
+		
+		imageLabelView.applyTopPinConstraint(toSuperview: 0)
+		imageLabelView.applyLeadingAndTrailingPinConstraint(toSuperview: 0)
+		
+		separator.applyHeightConstraint(1)
+		separator.applyLeadingAndTrailingPinConstraint(toSuperview: 0)
+		separator.applyBottomPinConstraint(toSuperview: 0)
+		
+		//NSLayoutConstraint(item: image, attribute: .bottom, relatedBy: .equal, toItem: separator, attribute: .top, multiplier: 1, constant: 8).isActive = true
+		NSLayoutConstraint(item: separator, attribute: .top, relatedBy: .equal, toItem: imageLabelView, attribute: .bottom, multiplier: 1, constant: 8).isActive = true
+		NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: image, attribute: .trailing, multiplier: 1, constant: 32).isActive = true
+		
+		//Add image bottom constraint in case of too small cell
+		let fixSizeBotConstraint = NSLayoutConstraint(item: imageLabelView, attribute: .bottom, relatedBy: .equal, toItem: image, attribute: .bottom, multiplier: 1, constant: 8)
+		fixSizeBotConstraint.priority = 250
+		fixSizeBotConstraint.isActive = true
+		
+		NSLayoutConstraint(item: imageLabelView, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: image, attribute: .bottom, multiplier: 1, constant: 8).isActive = true
+        
+        return view
+    }
 }
 
-extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
+/*extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return excursion.tableContent != nil ? excursion.tableContent!.count : 0
+		return excursion.tableContent?.count ?? 0
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -491,7 +624,6 @@ extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 		cell.descriptionText.textColor = UIColor.primary
 		//cell.descriptionText.adjustsFontSizeToFitWidth = true
 		//cell.descriptionText.minimumScaleFactor = 0.2
-		cell.descriptionText.font = cell.descriptionText.font.withSize(fontSize())
        // cell.descriptionText.setMaxFontSize(minSize: 7, maxSize: 21)
         
         if !tableCells.contains(cell) {
@@ -505,21 +637,11 @@ extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 		return cell
 	}
 	
-	func fontSize() -> CGFloat {
-		
-		//let bounds = UIScreen.main.bounds
-		//let width = bounds.width < bounds.height ? bounds.width : bounds.height
-		
-		//print(width)
-		
-		return 16
-	}
-	
 	/*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return UITableViewAutomaticDimension
 	}*/
 	
-	func updateHeight() {
+/*	func updateHeight() {
 		let height = tableViewHeight()
 		tableHeight.constant = height
 		self.view.updateConstraints()
@@ -531,14 +653,19 @@ extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 			height += tableView(tableView, heightForRowAt: IndexPath(row: i, section: 0))
 		}
 		return height
-	}
+	}*/
     
  /*   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height * tableCellHeightRatio
     }*/
 	
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let minHeight = UIScreen.main.bounds.height * tableCellHeightRatio
+        return UITableViewAutomaticDimension
+        /*let minHeight = UIScreen.main.bounds.height * tableCellHeightRatio
         
         guard tableCells.count > indexPath.row else {return minHeight}
         let cell = tableCells[indexPath.row]
@@ -554,7 +681,7 @@ extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 		
         let textViewHeight = contentHeight + topBottomIndent
         
-        return textViewHeight > minHeight ? textViewHeight : minHeight
+        return textViewHeight > minHeight ? textViewHeight : minHeight*/
 	}
 	
 	func labelHeight(_ label: UILabel) -> CGFloat {
@@ -601,3 +728,4 @@ extension ExcursionDetailView: UITableViewDelegate, UITableViewDataSource {
 		self.view.setNeedsLayout()
 	}*/
 }
+*/

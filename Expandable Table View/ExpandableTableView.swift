@@ -12,18 +12,16 @@ struct ExpandableTableViewSection {
 	var name: String!
 	var icon: UIImage?
 	var content: [UIView]!
+	var cellCount: Int
 	var collapsed: Bool!
 	
-	init(name: String, icon: UIImage?, content: [UIView], collapsed: Bool) {
+	init(name: String, icon: UIImage?, content: [UIView], collapsed: Bool, cellCount: Int = 0) {
 		self.name = name
 		self.icon = icon
 		self.content = content
 		self.collapsed = collapsed
 		
-	//	for view in content {
-			//view.tag = ViewType.
-	//	}
-		//content.tag = ViewType.wellness.rawValue
+		self.cellCount = content.count != 0 ? content.count : cellCount
 	}
 	
 	init(name: String, icon: UIImage?, content: [UIView]) {
@@ -39,9 +37,15 @@ struct ExpandableTableViewSection {
 	}
 }
 
+@objc protocol ExpandableTableViewDelegate {
+	@objc optional func expandableTableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+	
+}
+
 class ExpandableTableView: UITableView, ExpandableTableViewHeaderDelegate {
 	
 	var headerHeight: CGFloat = 66
+	var expandableTableDelegate: ExpandableTableViewDelegate?
 	
 	override init(frame: CGRect, style: UITableViewStyle) {
 		super.init(frame: frame, style: style)
@@ -142,13 +146,18 @@ extension ExpandableTableView: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return sections![section].collapsed! ? 0 : sections![section].content.count
+		return sections![section].collapsed! ? 0 : sections![section].cellCount
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = UINib(nibName: "ExpandableTableViewCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ExpandableTableViewCell else {return UITableViewCell()}
 		
-		let item = sections?[indexPath.section].content[indexPath.row]
+		var item = UIView()
+		if let subview = expandableTableDelegate?.expandableTableView?(tableView, cellForRowAt: indexPath) {
+			item = subview
+		} else {
+			item = (sections?[indexPath.section].content[indexPath.row])!
+		}
 		
 		cell.sectionContent = item
 		

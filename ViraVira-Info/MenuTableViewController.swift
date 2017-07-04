@@ -17,7 +17,7 @@ struct JPMenuItem: Equatable {
 	static let home = JPMenuItem(title: "Home", image: #imageLiteral(resourceName: "home"), segueIdentifier: "HomeSegue")
 	static let info = JPMenuItem(title: "Info", image: #imageLiteral(resourceName: "info"), segueIdentifier: "InfoSegue")
 	static let weather = JPMenuItem(title: "Weather", image: #imageLiteral(resourceName: "Weather"), segueIdentifier: "WeatherSegue")
-	static let excursion = JPMenuItem(title: "Excursion", image: #imageLiteral(resourceName: "excursion"), segueIdentifier: "ExcursionSegue")
+	static let excursion = JPMenuItem(title: "Excursions", image: #imageLiteral(resourceName: "excursion"), segueIdentifier: "ExcursionSegue")
 	static let massage = JPMenuItem(title: "Massage", image: #imageLiteral(resourceName: "massage"), segueIdentifier: "SpaSegue")
 	static let followUs = JPMenuItem(title: "Follow Us", image: #imageLiteral(resourceName: "follow_us"), segueIdentifier: "FollowUsSegue")
 	static let settings = JPMenuItem(title: "Settings", image: #imageLiteral(resourceName: "Settings"), segueIdentifier: "SettingsSegue")
@@ -63,7 +63,7 @@ class MenuTableViewController: UITableViewController, SWRevealViewControllerDele
 		
 		self.revealViewController().frontViewShadowColor = UIColor.primary
 		
-		self.revealViewController().delegate = self
+		//self.revealViewController().delegate = self
 		
 		createMenu()
 		
@@ -157,7 +157,7 @@ class MenuTableViewController: UITableViewController, SWRevealViewControllerDele
 		if shouldPerformSegue(withIdentifier: lastItem.segueIdentifier, sender: self) {
 			performSegue(withIdentifier: MenuTableViewController.currentItem.segueIdentifier, sender: self)
 		} else {
-			let revealViewController = (UIApplication.shared.delegate as! AppDelegate).currentViewController?.revealViewController()
+			let revealViewController = Menu.currentRootViewController.revealViewController()
 			revealViewController?.revealToggle(animated: true)
 		}
 	}

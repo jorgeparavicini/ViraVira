@@ -10,7 +10,7 @@ import UIKit
 
 class ExcursionTableCell: UITableViewCell {
 	//MARK: -Properties\
-    @IBOutlet weak var thumbnailImage: ARImageView!
+    @IBOutlet weak var thumbnailImage: UIImageView!
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var content: UIView!

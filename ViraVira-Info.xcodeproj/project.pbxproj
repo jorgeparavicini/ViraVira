@@ -20,8 +20,12 @@
 		CF20370B1EA7D51C00B11DB7 /* Massage.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF20370A1EA7D51C00B11DB7 /* Massage.xib */; };
 		CF210C091E930AA700E91E32 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF210C081E930AA700E91E32 /* NSLayoutConstraint.swift */; };
 		CF210C0B1E94040E00E91E32 /* DynamicUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF210C0A1E94040E00E91E32 /* DynamicUITableView.swift */; };
+		CF22A5F61EE362AD0075E5BB /* ExcursionSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF22A5F51EE362AD0075E5BB /* ExcursionSectionHeader.swift */; };
+		CF22A5F81EE362F90075E5BB /* ExcursionSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF22A5F71EE362F90075E5BB /* ExcursionSectionHeader.xib */; };
+		CF26E45F1EDC90AA002FA450 /* ExcursionImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26E45E1EDC90AA002FA450 /* ExcursionImageDownloader.swift */; };
 		CF27929D1E325EC400805C19 /* ExcursionImageDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF27929C1E325EC400805C19 /* ExcursionImageDescription.swift */; };
 		CF2C5DDC1D3CED4600E47BB2 /* SpaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C5DDB1D3CED4600E47BB2 /* SpaController.swift */; };
+		CF30050E1ECCBE92007C6FFF /* ExcursionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30050D1ECCBE92007C6FFF /* ExcursionParser.swift */; };
 		CF350E291E9AB82400949761 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF350E281E9AB82400949761 /* InfoTableViewCell.swift */; };
 		CF350E2D1E9AC17100949761 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF350E2B1E9AC17100949761 /* WellnessViewController.swift */; };
 		CF350E2E1E9AC17100949761 /* WellnessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF350E2C1E9AC17100949761 /* WellnessViewController.xib */; };
@@ -59,12 +63,18 @@
 		CF86392F1D2D24F900B126D4 /* ViraVira_InfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86392E1D2D24F900B126D4 /* ViraVira_InfoTests.swift */; };
 		CF8EE11C1E85C2000084E365 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8EE11B1E85C2000084E365 /* Main.storyboard */; };
 		CFAD24861D2E66D600D39907 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD24851D2E66D600D39907 /* NavigationController.swift */; };
+		CFB19B7F1F0ABDF30060847A /* WeatherParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB19B7E1F0ABDF30060847A /* WeatherParser.swift */; };
+		CFB19B811F0AC7590060847A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB19B801F0AC7590060847A /* NetworkManager.swift */; };
+		CFB19B831F0BAF6C0060847A /* appInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFB19B821F0BAF6C0060847A /* appInfo.plist */; };
 		CFB4E0E71E649534007217F0 /* FollowUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB4E0E61E649534007217F0 /* FollowUsTableViewCell.swift */; };
 		CFB714F51E251E2E00438478 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB714F41E251E2E00438478 /* WeatherCollectionViewCell.swift */; };
 		CFB714F91E2524A200438478 /* WeatherCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB714F81E2524A200438478 /* WeatherCollectionView.swift */; };
 		CFB714FB1E252A8F00438478 /* WeatherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB714FA1E252A8F00438478 /* WeatherTableView.swift */; };
 		CFC028531E43791F007C9512 /* ImageGallaryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC028521E43791F007C9512 /* ImageGallaryCollectionView.swift */; };
 		CFC028551E44C8AD007C9512 /* ImageGallaryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC028541E44C8AD007C9512 /* ImageGallaryFlowLayout.swift */; };
+		CFC128421EE4576A007DBA39 /* ViraViraFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC128411EE4576A007DBA39 /* ViraViraFonts.swift */; };
+		CFC128441EE4584D007DBA39 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC128431EE4584D007DBA39 /* UIScreen.swift */; };
+		CFC128461EE48030007DBA39 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC128451EE48030007DBA39 /* UIFont.swift */; };
 		CFC9373F1D89AD9800BAE217 /* MenuButtonArrowNoStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC9373E1D89AD9800BAE217 /* MenuButtonArrowNoStick.swift */; };
 		CFC937411D89B02B00BAE217 /* MenuButtonCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC937401D89B02B00BAE217 /* MenuButtonCross.swift */; };
 		CFD03B921EA036E400A4A0E5 /* WellnessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD03B911EA036E400A4A0E5 /* WellnessSection.swift */; };
@@ -85,13 +95,13 @@
 		CFE4DF1F1E4C1991000D07D6 /* ExcursionMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4DF1D1E4C1991000D07D6 /* ExcursionMapViewController.swift */; };
 		CFE4DF201E4C1991000D07D6 /* ExcursionMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE4DF1E1E4C1991000D07D6 /* ExcursionMapViewController.xib */; };
 		CFE4DF221E4D0B60000D07D6 /* MapParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4DF211E4D0B5F000D07D6 /* MapParser.swift */; };
-		CFE4DF241E4E1560000D07D6 /* ARImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE4DF231E4E1560000D07D6 /* ARImageView.swift */; };
 		CFEA789B1E74841B00C45A82 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA789A1E74841B00C45A82 /* SettingsTableViewController.swift */; };
 		CFEA789D1E7AD88D00C45A82 /* JPMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA789C1E7AD88D00C45A82 /* JPMath.swift */; };
 		CFEB23771D611F0900289D5E /* ExcursionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB23761D611F0900289D5E /* ExcursionTableCell.swift */; };
 		CFEB23791D62495F00289D5E /* ExcursionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB23781D62495F00289D5E /* ExcursionTable.swift */; };
 		CFEB237B1D626EF300289D5E /* ExcursionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB237A1D626EF300289D5E /* ExcursionDetailView.swift */; };
 		CFEEFB7B1E14113A00A9E240 /* ExcursionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEEFB7A1E14113A00A9E240 /* ExcursionHeader.swift */; };
+		CFF58B101EE0738F00B32647 /* ExcursionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF58B0F1EE0738F00B32647 /* ExcursionManager.swift */; };
 		EFE6FA4029B7A31CCBD44236 /* Pods_ViraVira_InfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7938E749F09D65F43CDF2AD1 /* Pods_ViraVira_InfoTests.framework */; };
 		F7EB1F1DD0EC1CCD615A8D19 /* Pods_ViraVira_Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313C5336E005B5D650475CE2 /* Pods_ViraVira_Info.framework */; };
 /* End PBXBuildFile section */
@@ -125,8 +135,12 @@
 		CF20370A1EA7D51C00B11DB7 /* Massage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Massage.xib; sourceTree = "<group>"; };
 		CF210C081E930AA700E91E32 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		CF210C0A1E94040E00E91E32 /* DynamicUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicUITableView.swift; sourceTree = "<group>"; };
+		CF22A5F51EE362AD0075E5BB /* ExcursionSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionSectionHeader.swift; sourceTree = "<group>"; };
+		CF22A5F71EE362F90075E5BB /* ExcursionSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExcursionSectionHeader.xib; sourceTree = "<group>"; };
+		CF26E45E1EDC90AA002FA450 /* ExcursionImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionImageDownloader.swift; sourceTree = "<group>"; };
 		CF27929C1E325EC400805C19 /* ExcursionImageDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionImageDescription.swift; sourceTree = "<group>"; };
 		CF2C5DDB1D3CED4600E47BB2 /* SpaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaController.swift; sourceTree = "<group>"; };
+		CF30050D1ECCBE92007C6FFF /* ExcursionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionParser.swift; sourceTree = "<group>"; };
 		CF350E281E9AB82400949761 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		CF350E2B1E9AC17100949761 /* WellnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
 		CF350E2C1E9AC17100949761 /* WellnessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WellnessViewController.xib; sourceTree = "<group>"; };
@@ -170,12 +184,18 @@
 		CF8639301D2D24F900B126D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8EE11B1E85C2000084E365 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFAD24851D2E66D600D39907 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CFB19B7E1F0ABDF30060847A /* WeatherParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherParser.swift; sourceTree = "<group>"; };
+		CFB19B801F0AC7590060847A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CFB19B821F0BAF6C0060847A /* appInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appInfo.plist; sourceTree = "<group>"; };
 		CFB4E0E61E649534007217F0 /* FollowUsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowUsTableViewCell.swift; sourceTree = "<group>"; };
 		CFB714F41E251E2E00438478 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFB714F81E2524A200438478 /* WeatherCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCollectionView.swift; sourceTree = "<group>"; };
 		CFB714FA1E252A8F00438478 /* WeatherTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableView.swift; sourceTree = "<group>"; };
 		CFC028521E43791F007C9512 /* ImageGallaryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGallaryCollectionView.swift; sourceTree = "<group>"; };
 		CFC028541E44C8AD007C9512 /* ImageGallaryFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGallaryFlowLayout.swift; sourceTree = "<group>"; };
+		CFC128411EE4576A007DBA39 /* ViraViraFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViraViraFonts.swift; sourceTree = "<group>"; };
+		CFC128431EE4584D007DBA39 /* UIScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		CFC128451EE48030007DBA39 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CFC9373E1D89AD9800BAE217 /* MenuButtonArrowNoStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonArrowNoStick.swift; sourceTree = "<group>"; };
 		CFC937401D89B02B00BAE217 /* MenuButtonCross.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonCross.swift; sourceTree = "<group>"; };
 		CFD03B911EA036E400A4A0E5 /* WellnessSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessSection.swift; sourceTree = "<group>"; };
@@ -196,13 +216,13 @@
 		CFE4DF1D1E4C1991000D07D6 /* ExcursionMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionMapViewController.swift; sourceTree = "<group>"; };
 		CFE4DF1E1E4C1991000D07D6 /* ExcursionMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExcursionMapViewController.xib; sourceTree = "<group>"; };
 		CFE4DF211E4D0B5F000D07D6 /* MapParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapParser.swift; sourceTree = "<group>"; };
-		CFE4DF231E4E1560000D07D6 /* ARImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARImageView.swift; sourceTree = "<group>"; };
 		CFEA789A1E74841B00C45A82 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CFEA789C1E7AD88D00C45A82 /* JPMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JPMath.swift; sourceTree = "<group>"; };
 		CFEB23761D611F0900289D5E /* ExcursionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionTableCell.swift; sourceTree = "<group>"; };
 		CFEB23781D62495F00289D5E /* ExcursionTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionTable.swift; sourceTree = "<group>"; };
 		CFEB237A1D626EF300289D5E /* ExcursionDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionDetailView.swift; sourceTree = "<group>"; };
 		CFEEFB7A1E14113A00A9E240 /* ExcursionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionHeader.swift; sourceTree = "<group>"; };
+		CFF58B0F1EE0738F00B32647 /* ExcursionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionManager.swift; sourceTree = "<group>"; };
 		FE93211B83F9AAF0017B92BA /* Pods-ViraVira-Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViraVira-Info.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViraVira-Info/Pods-ViraVira-Info.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -430,6 +450,7 @@
 			children = (
 				CF98EAE01E27E47100559A16 /* Models */,
 				CF98EADF1E27E46400559A16 /* Views */,
+				CFB19B7E1F0ABDF30060847A /* WeatherParser.swift */,
 			);
 			name = Weather;
 			sourceTree = "<group>";
@@ -456,13 +477,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CF98EAE11E27E4A600559A16 /* Models */ = {
+		CF98EAE11E27E4A600559A16 /* Models and Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				CFD58F2A1DDE15C700B8AA38 /* ExcursionDataModel.swift */,
 				CFEEFB7A1E14113A00A9E240 /* ExcursionHeader.swift */,
+				CF30050D1ECCBE92007C6FFF /* ExcursionParser.swift */,
+				CF26E45E1EDC90AA002FA450 /* ExcursionImageDownloader.swift */,
+				CFF58B0F1EE0738F00B32647 /* ExcursionManager.swift */,
 			);
-			name = Models;
+			name = "Models and Helpers";
 			sourceTree = "<group>";
 		};
 		CFD7EEBF1D3A8015002DEA14 /* Extensions */ = {
@@ -479,6 +503,9 @@
 				CF210C081E930AA700E91E32 /* NSLayoutConstraint.swift */,
 				CF4AA7181E9C2ED3006C3B3C /* CGRect.swift */,
 				CFD03B951EA1186700A4A0E5 /* UIView.swift */,
+				CFC128411EE4576A007DBA39 /* ViraViraFonts.swift */,
+				CFC128431EE4584D007DBA39 /* UIScreen.swift */,
+				CFC128451EE48030007DBA39 /* UIFont.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -511,7 +538,6 @@
 				CF10870E1E3FE2FE0087F6A0 /* UIImage+Alpha.swift */,
 				CF10870F1E3FE2FE0087F6A0 /* UIImage+Resize.swift */,
 				CF1087101E3FE2FE0087F6A0 /* UIImage+RoundedCorner.swift */,
-				CFE4DF231E4E1560000D07D6 /* ARImageView.swift */,
 			);
 			name = ImageResize;
 			sourceTree = "<group>";
@@ -540,6 +566,8 @@
 				CF8639221D2D24F900B126D4 /* LaunchScreen.storyboard */,
 				CF8639251D2D24F900B126D4 /* Info.plist */,
 				CF8639191D2D24F900B126D4 /* AppDelegate.swift */,
+				CFB19B801F0AC7590060847A /* NetworkManager.swift */,
+				CFB19B821F0BAF6C0060847A /* appInfo.plist */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -565,7 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE4DF1C1E4C1955000D07D6 /* Map */,
-				CF98EAE11E27E4A600559A16 /* Models */,
+				CF98EAE11E27E4A600559A16 /* Models and Helpers */,
 				CFFBB2241E15694C004E70FE /* Views */,
 			);
 			name = Excursion;
@@ -590,6 +618,8 @@
 				CF27929C1E325EC400805C19 /* ExcursionImageDescription.swift */,
 				CFDC93431E421B1F00615C0E /* ImageGallaryCollectionViewCell.swift */,
 				CFDC93441E421B1F00615C0E /* ImageGallaryCollectionViewCell.xib */,
+				CF22A5F51EE362AD0075E5BB /* ExcursionSectionHeader.swift */,
+				CF22A5F71EE362F90075E5BB /* ExcursionSectionHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -706,10 +736,12 @@
 				CF7AC7A21EB676D200DD7C3A /* ExpandableTableViewCell.xib in Resources */,
 				CF2037091EA6C9E900B11DB7 /* WellnessTableViewCell.xib in Resources */,
 				CF5BADEA1EAC02DC001BDB39 /* MinibarViewController.xib in Resources */,
+				CF22A5F81EE362F90075E5BB /* ExcursionSectionHeader.xib in Resources */,
 				CFDC93461E421B1F00615C0E /* ImageGallaryCollectionViewCell.xib in Resources */,
 				CFE4DF201E4C1991000D07D6 /* ExcursionMapViewController.xib in Resources */,
 				CF8EE11C1E85C2000084E365 /* Main.storyboard in Resources */,
 				CF5BADDC1EAAD6A9001BDB39 /* UsefullInformationViewController.xib in Resources */,
+				CFB19B831F0BAF6C0060847A /* appInfo.plist in Resources */,
 				CF8639211D2D24F900B126D4 /* Assets.xcassets in Resources */,
 				CFE4DF191E4ABF96000D07D6 /* MenuTableViewCell.xib in Resources */,
 			);
@@ -876,7 +908,6 @@
 				CFD7EEC11D3A8039002DEA14 /* UIColor.swift in Sources */,
 				CFB714FB1E252A8F00438478 /* WeatherTableView.swift in Sources */,
 				CFEB237B1D626EF300289D5E /* ExcursionDetailView.swift in Sources */,
-				CFE4DF241E4E1560000D07D6 /* ARImageView.swift in Sources */,
 				CFB714F51E251E2E00438478 /* WeatherCollectionViewCell.swift in Sources */,
 				CF1087121E3FE2FE0087F6A0 /* UIImage+Resize.swift in Sources */,
 				CFD58F311DE344CA00B8AA38 /* UIButtonAnimation.swift in Sources */,
@@ -885,24 +916,32 @@
 				CF0FC6C51E26E79800DC2E53 /* UIImageView.swift in Sources */,
 				CFE001141D2FB536003C4441 /* HomeView.swift in Sources */,
 				CF0765B21D32940800FD73B7 /* TextFormatter.swift in Sources */,
+				CFF58B101EE0738F00B32647 /* ExcursionManager.swift in Sources */,
 				CFD58F2B1DDE15C700B8AA38 /* ExcursionDataModel.swift in Sources */,
 				CFB714F91E2524A200438478 /* WeatherCollectionView.swift in Sources */,
+				CF22A5F61EE362AD0075E5BB /* ExcursionSectionHeader.swift in Sources */,
 				CFE4DF1F1E4C1991000D07D6 /* ExcursionMapViewController.swift in Sources */,
 				CFEB23791D62495F00289D5E /* ExcursionTable.swift in Sources */,
 				CFC028531E43791F007C9512 /* ImageGallaryCollectionView.swift in Sources */,
+				CFC128441EE4584D007DBA39 /* UIScreen.swift in Sources */,
 				CF0216491E2A8C410074A034 /* WeatherDescriptionLabel.swift in Sources */,
 				CFD03B941EA1167500A4A0E5 /* WellnessHeaderView.swift in Sources */,
 				CFC937411D89B02B00BAE217 /* MenuButtonCross.swift in Sources */,
 				CFEA789D1E7AD88D00C45A82 /* JPMath.swift in Sources */,
 				CF48485D1D2D65BC00840E57 /* Constants.swift in Sources */,
+				CFB19B7F1F0ABDF30060847A /* WeatherParser.swift in Sources */,
+				CFC128421EE4576A007DBA39 /* ViraViraFonts.swift in Sources */,
 				CFEEFB7B1E14113A00A9E240 /* ExcursionHeader.swift in Sources */,
 				CF7AC7A01EB676D200DD7C3A /* ExpandableTableView.swift in Sources */,
 				CF350E291E9AB82400949761 /* InfoTableViewCell.swift in Sources */,
 				CF5BADCE1EA90BAD001BDB39 /* MassageView.swift in Sources */,
 				CFE001101D2FAB5C003C4441 /* Time.swift in Sources */,
+				CF26E45F1EDC90AA002FA450 /* ExcursionImageDownloader.swift in Sources */,
 				CF3C4F3C1E83FAC600C254CE /* ExcursionDetailTableViewCell.swift in Sources */,
 				CFD03B961EA1186700A4A0E5 /* UIView.swift in Sources */,
 				CF4B7DBC1D3BD3F5004FB156 /* SWRevealViewController.m in Sources */,
+				CF30050E1ECCBE92007C6FFF /* ExcursionParser.swift in Sources */,
+				CFB19B811F0AC7590060847A /* NetworkManager.swift in Sources */,
 				CF5EBE591E1E955F00B99476 /* WeatherModel.swift in Sources */,
 				CF0765AE1D32576500FD73B7 /* MenuTableViewController.swift in Sources */,
 				CFAD24861D2E66D600D39907 /* NavigationController.swift in Sources */,
@@ -913,6 +952,7 @@
 				CFE12A1F1E2403E9008A27B0 /* WeatherTableViewCell.swift in Sources */,
 				CF86391A1D2D24F900B126D4 /* AppDelegate.swift in Sources */,
 				CFD58F2F1DE3445700B8AA38 /* CALayer.swift in Sources */,
+				CFC128461EE48030007DBA39 /* UIFont.swift in Sources */,
 				CFC9373F1D89AD9800BAE217 /* MenuButtonArrowNoStick.swift in Sources */,
 				CF7AC7A31EB676D200DD7C3A /* ExpandableTableViewHeader.swift in Sources */,
 				CFEB23771D611F0900289D5E /* ExcursionTableCell.swift in Sources */,

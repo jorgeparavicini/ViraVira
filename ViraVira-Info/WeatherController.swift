@@ -20,11 +20,7 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 	var weatherMaps: [WeatherModel] = [WeatherModel]()
 	var currentWeatherMap: WeatherModel?
 	
-	var weatherDays: [WeatherDay]? {
-		didSet {
-			//pickerView.reloadData()
-		}
-	}
+	var weatherDays: [WeatherDay]?
 	
 	@IBOutlet weak var scrollView: UIScrollView!
 	var refreshControl: UIRefreshControl!
@@ -46,6 +42,11 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		WeatherParser().getExcursionModels(completion: {(maps) in
+			guard maps != nil else {return}
+			self.weatherMaps = maps!
+		})
 
 		menuButton = Menu.menuButton(self, animation: Menu.Animation.HamburgerToCross)
 		
@@ -60,7 +61,7 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		
 		updateWeather()
 		
-		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
+		Menu.currentRootViewController = self
 		
 		self.refreshControl = UIRefreshControl()
 		let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
@@ -79,11 +80,15 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		let attrs: [String: Any] = [
 			NSFontAttributeName : UIFont(name: "Verdana", size: 12)!,
 			NSForegroundColorAttributeName : UIColor.primary,
-			NSUnderlineStyleAttributeName : 1]
+			NSUnderlineStyleAttributeName : 1
+		]
 		let attributedString = NSAttributedString(string: "Open Weather Map", attributes: attrs)
 		openWeatherMapLink.setAttributedTitle(attributedString, for: .normal)
 		
 		setColors()
+		setAttributes()
+		
+		
     }
 	
 	func setColors() {
@@ -96,7 +101,12 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		tableView.backgroundColor = UIColor.clear
 		tableView.separatorColor = UIColor.primary
 	}
-
+	
+	func setAttributes() {
+		cityLabel.attributedText = NSAttributedString(string: cityLabel.text!, attributes: ViraViraFontAttributes.title)
+		condition.attributedText = NSAttributedString(string: condition.text!, attributes: ViraViraFontAttributes.description)
+		currentTemp.attributedText = NSAttributedString(string: currentTemp.text!, attributes: ViraViraFontAttributes.temp)
+	}
 	
 	func toggle(_ sender: AnyObject!) {
 		self.menuButton.animate(animationType: .Automatic)
@@ -191,25 +201,27 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 				return
 			}
 			self.currentWeatherMap = self.weatherMaps[0]
-			self.condition.text = self.currentWeatherMap?.weatherDescription
+			self.condition.attributedText = NSAttributedString(string: (self.currentWeatherMap?.weatherDescription)!)
 			self.iconView.image = self.currentWeatherMap?.icon?.withRenderingMode(.alwaysTemplate)
 			//iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
 			if let temperature = self.currentWeatherMap?.temp(unit: self.tempUnit) {
 				let convertedTemp = Double(round(temperature*10)/10)
-				
-				self.currentTemp.text = "\(convertedTemp)°"
+				var degree = ""
+				//self.currentTemp.attributedText = NSAttributedString(string: "\(convertedTemp)°")
 				
 				switch self.tempUnit {
 				case .Celsius:
-					self.currentTemp.text = self.currentTemp.text?.appending("C")
+					degree = "C"
 				case .Fahrenheit:
-					self.currentTemp.text = self.currentTemp.text?.appending("F")
+					degree = "F"
 				case .Kelvin:
-					self.currentTemp.text = self.currentTemp.text?.appending("K")
+					degree = "K"
 					
 				}
+				
+				self.currentTemp.attributedText = NSAttributedString(string: "\(convertedTemp) \(degree)°", attributes: ViraViraFontAttributes.temp)
 			} else {
-				self.currentTemp.text = "--"
+				self.currentTemp.attributedText = NSAttributedString(string: "--", attributes: ViraViraFontAttributes.temp)
 			}
 			
 			self.tableView.weatherDays = self.weatherDays
@@ -251,6 +263,9 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 			self.dismiss(animated: true, completion: nil)
 		}
 	}
+	
+	
+	
 	@IBAction func openLink(_ sender: Any) {
 		let url = URL(string: "https://openweathermap.org/")!
 		if #available(iOS 10.0, *) {
@@ -260,18 +275,4 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		}
 	}
 }
-
-/*extension WeatherController: UITableViewDelegate, UITableViewDataSource {
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 0
-	}
-
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
-	}
-	
-	
-}
-*/
 

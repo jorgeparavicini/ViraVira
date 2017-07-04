@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExcursionSectionHeader" customModule="ViraVira_Info" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="iN0-l3-epB" customClass="ExcursionSectionHeader" customModule="ViraVira_Info" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxi-TV-RiP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FjQ-4G-nm1">
+                            <rect key="frame" x="16" y="8" width="51" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="FjQ-4G-nm1" secondAttribute="height" multiplier="1:1" id="dab-Ow-ad5"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdn-ry-ts2">
+                            <rect key="frame" x="99" y="8" width="268" height="51"/>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="36"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wdn-ry-ts2" firstAttribute="top" secondItem="Wxi-TV-RiP" secondAttribute="top" constant="8" id="Fg2-0K-DL5"/>
+                        <constraint firstAttribute="trailing" secondItem="wdn-ry-ts2" secondAttribute="trailing" constant="8" id="gAx-jJ-ODX"/>
+                        <constraint firstItem="wdn-ry-ts2" firstAttribute="leading" secondItem="FjQ-4G-nm1" secondAttribute="trailing" constant="32" id="j2n-gA-Wce"/>
+                        <constraint firstItem="FjQ-4G-nm1" firstAttribute="leading" secondItem="Wxi-TV-RiP" secondAttribute="leading" constant="16" id="mIm-22-TVo"/>
+                        <constraint firstItem="FjQ-4G-nm1" firstAttribute="top" secondItem="Wxi-TV-RiP" secondAttribute="top" constant="8" id="wCR-Pt-kIu"/>
+                        <constraint firstAttribute="bottom" secondItem="wdn-ry-ts2" secondAttribute="bottom" constant="8" id="zaB-Tx-CGJ"/>
+                        <constraint firstAttribute="bottom" secondItem="FjQ-4G-nm1" secondAttribute="bottom" constant="8" id="zpS-Mq-Cfv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="leading" secondItem="Wxi-TV-RiP" secondAttribute="leading" id="85O-ID-kE4"/>
+                <constraint firstAttribute="trailing" secondItem="Wxi-TV-RiP" secondAttribute="trailing" id="8qL-kO-627"/>
+                <constraint firstAttribute="top" secondItem="Wxi-TV-RiP" secondAttribute="top" id="E9I-5I-LWt"/>
+                <constraint firstAttribute="bottom" secondItem="Wxi-TV-RiP" secondAttribute="bottom" id="nax-UA-Dho"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="content" destination="Wxi-TV-RiP" id="PI5-iZ-0El"/>
+                <outlet property="titleIcon" destination="FjQ-4G-nm1" id="J7F-lW-eFW"/>
+                <outlet property="titleLabel" destination="wdn-ry-ts2" id="3Hq-1O-88N"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-246.5"/>
+        </view>
+    </objects>
+</document>

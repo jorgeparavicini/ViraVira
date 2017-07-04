@@ -50,7 +50,7 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 		
 		
 		
-		(UIApplication.shared.delegate as! AppDelegate).currentViewController = self
+		Menu.currentRootViewController = self
 		
 		setColors()
 	}
@@ -107,7 +107,7 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 		case (UIUserInterfaceSizeClass.regular, UIUserInterfaceSizeClass.regular):
 			return 64
 		default:
-			return 32
+			return 64
 		}
 	}
 	
@@ -122,13 +122,13 @@ class InformationController: UITableViewController, SWRevealViewControllerDelega
 	func destinationViewController(item: InfoMenuItem) -> UIViewController? {
 		
 		switch item.title.lowercased() {
-		case "wellness".lowercased():
+		case "wellness":
 			return WellnessViewController(nibName: item.viewController, bundle: nil)
-		case "useful information".lowercased():
+		case "useful information":
 			return UsefullInformationViewController(nibName: item.viewController, bundle: nil)
-		case "facility map".lowercased():
+		case "facility map":
 			return FacilityMapViewController(nibName: item.viewController, bundle: nil)
-		case "room service".lowercased():
+		case "room service":
 			return RoomServiceViewController(nibName: item.viewController, bundle: nil)
 		case "minibar":
 			return MinibarViewController(nibName: item.viewController, bundle: nil)

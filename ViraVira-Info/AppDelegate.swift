@@ -13,9 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 	
-	var currentViewController: AnyObject? = nil
-	
-	var spaWebView: UIWebView?
+	//var currentViewController: AnyObject? = nil
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

@@ -9,6 +9,9 @@
 import Foundation
 
 struct Menu{
+	
+	static var currentRootViewController: UIViewController! = nil
+	
     static func setup(_ target: AnyObject, menuButton: UIBarButtonItem) {
 		if target.revealViewController() != nil {
 			

@@ -40,7 +40,7 @@ class WeatherTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		var cell = dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeatherTableViewCell
 		
-		cell.dayTag.text = weatherDays?[indexPath.item].day()
+		cell.dayTag.attributedText = NSAttributedString(string: (weatherDays?[indexPath.item].day())!, attributes: ViraViraFontAttributes.cellTitles)
 		cell.collectionView.weatherDay = weatherDays![indexPath.item]
 		cell.collectionView.delegate = cell.collectionView
 		cell.collectionView.dataSource = cell.collectionView
@@ -58,5 +58,15 @@ class WeatherTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
 		cell.backgroundColor = UIColor.clear
 		
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		switch UIScreen.traits {
+		case (.regular, .regular):
+			return 200
+			
+		default:
+			return 125
+		}
 	}
 }

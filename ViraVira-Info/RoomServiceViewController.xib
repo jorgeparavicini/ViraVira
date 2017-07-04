@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,13 +19,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-GL-bBU">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-GL-bBU">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiP-p2-6hP">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="1095"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please call Front Desk in case you would like to enjoy a nice meal in your room." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2D-Nc-0a0">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please call Front Desk in case you would like to enjoy a nice meal in your room." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2D-Nc-0a0">
                                     <rect key="frame" x="16" y="16" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -34,7 +34,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hors D'ouvres" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p47-zf-cfR">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hors D'ouvres" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p47-zf-cfR">
                                     <rect key="frame" x="16" y="110" width="343" height="26"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
@@ -43,7 +43,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carpaccio of the day served with wild leaves" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-4J-iY2">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carpaccio of the day served with wild leaves" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-4J-iY2">
                                     <rect key="frame" x="16" y="152" width="343" height="41.5"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -52,7 +52,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXt-f0-Of1">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starters" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXt-f0-Of1">
                                     <rect key="frame" x="16" y="225.5" width="343" height="26"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
@@ -61,7 +61,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetables of our garden gratinated with parmesan from our Hacienda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-cB-G9a">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetables of our garden gratinated with parmesan from our Hacienda" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGi-cB-G9a">
                                     <rect key="frame" x="16" y="267.5" width="343" height="41.5"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -70,7 +70,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homemade marinated salmon from the Valdivian coast served with blinis of native potatoes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-sN-XTS">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homemade marinated salmon from the Valdivian coast served with blinis of native potatoes" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uf-sN-XTS">
                                     <rect key="frame" x="16" y="325" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -79,7 +79,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh salad of leaves, herbs and flowers from the garden served with a Vinaigrette of herbs of Provence" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZz-vc-O9U">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh salad of leaves, herbs and flowers from the garden served with a Vinaigrette of herbs of Provence" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZz-vc-O9U">
                                     <rect key="frame" x="16" y="403" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -88,7 +88,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Dish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCv-hW-jdM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Dish" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCv-hW-jdM">
                                     <rect key="frame" x="16" y="497" width="343" height="26"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
@@ -97,7 +97,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wild boar of our Hacienda braised in spices, couscous with fresh mint and vegetables from our gardens with a cream of cumin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-kq-uhy">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wild boar of our Hacienda braised in spices, couscous with fresh mint and vegetables from our gardens with a cream of cumin" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-kq-uhy">
                                     <rect key="frame" x="16" y="539" width="343" height="83"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -106,7 +106,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh catch from the Valdivian  coast roasted with black olives, organic ragout and fresh leaves" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7v-B9-mK4">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh catch from the Valdivian  coast roasted with black olives, organic ragout and fresh leaves" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7v-B9-mK4">
                                     <rect key="frame" x="16" y="638" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -115,7 +115,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homemade Raviolis stuffed with seasonal vegetables, served with a sauce of herbs of our garden" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-D6-KYA">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homemade Raviolis stuffed with seasonal vegetables, served with a sauce of herbs of our garden" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-D6-KYA">
                                     <rect key="frame" x="16" y="716" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -124,7 +124,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburger &quot;Vira Vira Style&quot; served with sauteed potatoes and a salad with leaves from the gardens" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-qy-pl7">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburger &quot;Vira Vira Style&quot; served with sauteed potatoes and a salad with leaves from the gardens" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-qy-pl7">
                                     <rect key="frame" x="16" y="794" width="343" height="62"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -133,7 +133,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-kt-HJ1">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-kt-HJ1">
                                     <rect key="frame" x="16" y="888" width="343" height="26"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
@@ -142,7 +142,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chestnut mousse served with dacquoise of almonds and ice-cream" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrH-sf-op0">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chestnut mousse served with dacquoise of almonds and ice-cream" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrH-sf-op0">
                                     <rect key="frame" x="16" y="930" width="343" height="41.5"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -151,7 +151,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parfrait of Raspberries, macerated strawberries and coulis of raspberries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-KZ-Qnf">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parfrait of Raspberries, macerated strawberries and coulis of raspberries" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-KZ-Qnf">
                                     <rect key="frame" x="16" y="987.5" width="343" height="41.5"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -160,7 +160,7 @@
                                         <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="24"/>
                                     </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bon Appetit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-Kh-Qx2">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bon Appetit!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-Kh-Qx2">
                                     <rect key="frame" x="16" y="1061" width="343" height="26"/>
                                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="21"/>
                                     <nil key="textColor"/>
