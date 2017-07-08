@@ -14,6 +14,7 @@ target 'ViraVira-Info' do
  	pod 'AlamofireImage', '~> 3.1'
     pod 'DeviceKit', '~> 1.0'
     pod 'Cache'
+    pod 'NVActivityIndicatorView'
 
   target 'ViraVira-InfoTests' do
     inherit! :search_paths

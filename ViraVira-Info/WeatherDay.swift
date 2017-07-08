@@ -20,7 +20,7 @@ class WeatherDay {
 		self.weatherModels = weatherModels
 	}
 	
-	func peakTemp() -> Double {
+	/*func peakTemp() -> Double {
 		var peak: Double = 0
 		for timeStamp in weatherModels {
 			if timeStamp.temp(unit: .Kelvin) > peak {
@@ -29,7 +29,7 @@ class WeatherDay {
 		}
 		
 		return peak
-	}
+	}*/
 	
 	func day() -> String? {
 		if weatherModels.count == 0 {

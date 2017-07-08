@@ -11,51 +11,50 @@ import UIKit
 class WeatherTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 	let cellIdentifier = "WeatherTableCell"
 	
-	/*let requiredInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-	
-	override var separatorInset: UIEdgeInsets {
-		didSet {
-			print(separatorInset)
-			if separatorInset != requiredInset {
-				separatorInset = requiredInset
-			}
-		}
-	}*/
-	
 	var weatherDays: [WeatherDay]? {
 		didSet {
 			self.reloadData()
 		}
 	}
-	var viewController: WeatherController?
 	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let days = weatherDays {
-			return days.count
-		} else {
-			return 0
+	var weatherMaps: [[Weather]] = [] {
+		didSet {
+			self.reloadData()
 		}
 	}
 	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		var cell = dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeatherTableViewCell
-		
-		cell.dayTag.attributedText = NSAttributedString(string: (weatherDays?[indexPath.item].day())!, attributes: ViraViraFontAttributes.cellTitles)
-		cell.collectionView.weatherDay = weatherDays![indexPath.item]
-		cell.collectionView.delegate = cell.collectionView
-		cell.collectionView.dataSource = cell.collectionView
-		
-		//tableView.separatorColor = UIColor.primary
-		
-		cell = setColor(for: cell)
-		
-		return cell
-	}
+	var viewController: WeatherController?
 	
 	func setColor(for cell: WeatherTableViewCell) -> WeatherTableViewCell{
 		cell.dayTag.textColor = UIColor.primary
 		cell.collectionView.backgroundColor = UIColor.clear
 		cell.backgroundColor = UIColor.clear
+		
+		return cell
+	}
+	
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return weatherMaps.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		var cell = dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeatherTableViewCell
+		
+		if let map = weatherMaps[indexPath.row].first {
+			cell.dayTag.attributedText = NSAttributedString(string: map.day(), attributes: ViraViraFontAttributes.cellTitles)
+		}
+		
+		if weatherMaps.count > indexPath.row {
+			let maps = weatherMaps[indexPath.row]
+			cell.collectionView.weatherMaps = maps
+		}
+		
+		
+		cell.collectionView.delegate = cell.collectionView
+		cell.collectionView.dataSource = cell.collectionView
+		
+		cell = setColor(for: cell)
 		
 		return cell
 	}

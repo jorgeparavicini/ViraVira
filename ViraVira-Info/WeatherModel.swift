@@ -57,7 +57,7 @@ class WeatherModel {
 		return "At \(time) the temperature will be at \(temp) degrees kelvin, \(pressure) hPa, \(humidity) % Humid. weather main: \(weatherMain), weather description: \(weatherDescription), iconID: \(iconID), clouds %: \(clouds), windSpeed: \(windSpeed), windDirection: \(windDir), rain int the last 3 hours: \(rain) mm."
 	}
 	
-	func temp(unit: Weather.TemperatureUnits) -> Double{
+	/*func temp(unit: Weather.TemperatureUnits) -> Double{
 		switch unit {
 		case .Celsius:
 			return temp - 273.15
@@ -77,7 +77,7 @@ class WeatherModel {
 		}
 		
 		return Double(round(temp(unit: unit)*Double(roundFactor))/Double(roundFactor))
-	}
+	}*/
 	
 	func day() -> String {
 		
@@ -117,13 +117,5 @@ extension Array where Element:WeatherModel {
 			weatherDays.append(currentWeatherDay!)
 		}
 		return weatherDays
-	}
-}
-
-class Weather {
-	enum TemperatureUnits {
-		case Kelvin
-		case Celsius
-		case Fahrenheit
 	}
 }

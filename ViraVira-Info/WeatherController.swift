@@ -7,87 +7,63 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import KVConstraintExtensionsMaster
 
 class WeatherController: UIViewController, SWRevealViewControllerDelegate {
+	
 	@IBOutlet weak var cityLabel: UILabel!
+	@IBOutlet weak var condition: UILabel!
+	@IBOutlet weak var iconView: UIImageView!
+	@IBOutlet weak var currentTemp: UILabel!
 	
 	@IBOutlet weak var navBar: UINavigationItem!
+	@IBOutlet weak var scrollView: UIScrollView!
+	
+	@IBOutlet weak var tableView: WeatherTableView!
+	@IBOutlet weak var openWeatherMapLink: UIButton!
+	
+    @IBOutlet weak var activityIndicatorView: UIView!
+	
+	var activityIndicator: NVActivityIndicatorView!
+    
+    
+    
 	var comesFromSegue: Bool = false
 	var menuButton: UIButtonAnimation! = nil
 	
-	@IBOutlet weak var currentTemp: UILabel!
-	
-	var weatherMaps: [WeatherModel] = [WeatherModel]()
-	var currentWeatherMap: WeatherModel?
-	
-	var weatherDays: [WeatherDay]?
-	
-	@IBOutlet weak var scrollView: UIScrollView!
 	var refreshControl: UIRefreshControl!
-	
-	
-	@IBOutlet weak var condition: UILabel!
-	@IBOutlet weak var iconView: UIImageView!
-	
-	@IBOutlet weak var tableView: WeatherTableView!
-	
-	@IBOutlet weak var openWeatherMapLink: UIButton!
-	
-	var tempUnit: Weather.TemperatureUnits = .Celsius
 	
 	var download: URLSessionDataTask?
 	
+	//var currentWeatherMap: WeatherModel?
+	//var weatherDays: [WeatherDay]?
 	
+	var weatherMaps: [[Weather]] = []
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		WeatherParser().getExcursionModels(completion: {(maps) in
-			guard maps != nil else {return}
-			self.weatherMaps = maps!
-		})
-
+		//Rework
+		Menu.currentRootViewController = self
 		menuButton = Menu.menuButton(self, animation: Menu.Animation.HamburgerToCross)
-		
 		navBar.leftBarButtonItem = UIBarButtonItem(customView: menuButton)
-		
-		self.revealViewController().delegate = self
-		
 		if comesFromSegue {
 			menuButton.animate(animationType: .Force_Close)
 			comesFromSegue = false
 		}
+		//End rework
+		self.revealViewController().delegate = self
 		
-		updateWeather()
+		initializeActivityIndicator()
 		
-		Menu.currentRootViewController = self
-		
-		self.refreshControl = UIRefreshControl()
-		let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
-		self.scrollView.addSubview(refreshView)
-		refreshView.addSubview(refreshControl)
-		refreshControl.addTarget(self, action: #selector(WeatherController.updateWeather), for: UIControlEvents.allEvents)
-		
-		//Picker view initialization
-		//picker = AKPickerView(frame: pickerView.frame)
-		
-		//picker.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin]
+		loadWeatherMaps()
 		
 		tableView.delegate = tableView
 		tableView.dataSource = tableView
 		
-		let attrs: [String: Any] = [
-			NSFontAttributeName : UIFont(name: "Verdana", size: 12)!,
-			NSForegroundColorAttributeName : UIColor.primary,
-			NSUnderlineStyleAttributeName : 1
-		]
-		let attributedString = NSAttributedString(string: "Open Weather Map", attributes: attrs)
-		openWeatherMapLink.setAttributedTitle(attributedString, for: .normal)
-		
 		setColors()
 		setAttributes()
-		
 		
     }
 	
@@ -106,6 +82,8 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		cityLabel.attributedText = NSAttributedString(string: cityLabel.text!, attributes: ViraViraFontAttributes.title)
 		condition.attributedText = NSAttributedString(string: condition.text!, attributes: ViraViraFontAttributes.description)
 		currentTemp.attributedText = NSAttributedString(string: currentTemp.text!, attributes: ViraViraFontAttributes.temp)
+		
+		openWeatherMapLink.setAttributedTitle(NSAttributedString(string: "Open Weather Map", attributes: ViraViraFontAttributes.smallInfo), for: .normal)
 	}
 	
 	func toggle(_ sender: AnyObject!) {
@@ -116,155 +94,107 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		toggle(self)
 	}
 	
-	
-	func updateWeather(){
-		let urlString = "http://api.openweathermap.org/data/2.5/forecast?id=3875070&APPID=e4a17bba974001fa1f0138645553c559"
-		let url = URL(string: urlString)
-		
-		//Creates an alert telling to please wait for the update
-		addOverlay()
-		
-		var failed = false
-		
-		download = URLSession.shared.dataTask(with:url!) { (data, response, error) in
-			if error != nil {
-				failed = true
-				//self.removeOverlay()
-				//print(error as! URLError)
-				let urlError = error as! URLError
-				
-				DispatchQueue.main.async {
-					self.dismiss(animated: true, completion:  ({
-						self.displayError(error: urlError)
-						}))
-				}
-				
-			} else {
-				do {
-					self.weatherMaps.removeAll()
-					
-					let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
-					
-					let list = parsedData["list"] as! NSArray
-					
-					for index in 0..<list.count {
-						let element = list[index] as! Dictionary<String, Any>
-						let timeStamp = element["dt"] as! Int
-						let main = element["main"] as! Dictionary<String, Any>
-						let temp = main["temp"] as! Double
-						let pressure = main["pressure"] as! Double
-						let humidity = main["humidity"] as! Double
-						
-						let weatherArray = element["weather"] as! NSArray
-						let weather = weatherArray[0] as! Dictionary<String, Any>
-						
-						let weatherMain = weather["main"] as! String
-						let weatherDescription = weather["description"] as! String
-						let weatherIconID = weather["icon"] as! String
-						
-						let clouds = (element["clouds"] as! Dictionary<String, Any>)["all"] as! Float
-						
-						let wind = element["wind"] as! Dictionary<String, Any>
-						let windSpeed = wind["speed"] as! Double
-						let windDirection = wind["deg"] as! Float
-						
-						let rain = element["rain"] as? Dictionary<String, Any>
-						let rainAmount = rain?["3h"] as? Double
-						
-						let weatherModel = WeatherModel(time: timeStamp, temp: temp, pressure: pressure, humidity: humidity, weatherMain: weatherMain, weatherDescription: weatherDescription, iconID: weatherIconID, clouds: clouds, windSpeed: windSpeed, windDir: windDirection, rain: rainAmount)
-						
-						//print(weatherModel.description())
-						
-						self.weatherMaps.append(weatherModel)
-					}
-					
-				} catch let error as NSError {
-					print(error)
-				}
-			}
-			let days = self.weatherMaps.createWeatherDays()
-			self.weatherDays = days
-			
-			//Remove the overlay since the weather has been updated
-			if !failed {
-				self.removeOverlay()
-			}
-			self.updateDisplay()
-			}
-		self.download?.resume()
+	func initializeRefreshView() {
+		self.refreshControl = UIRefreshControl()
+		let refreshView = UIView(frame: CGRect(x: 0, y: 10, width: 0, height: 0))
+		self.scrollView.addSubview(refreshView)
+		refreshView.addSubview(refreshControl)
+		refreshControl.addTarget(self, action: #selector(WeatherController.loadWeatherMaps), for: UIControlEvents.allEvents)
 	}
+	
+	func initializeActivityIndicator() {
+		activityIndicator = NVActivityIndicatorView(frame: activityIndicatorView.frame, type: NVActivityIndicatorType.ballClipRotateMultiple, color: UIColor.primary, padding: 0)
+		
+		
+		activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+		activityIndicatorView.addSubview(activityIndicator)
+		
+		activityIndicator.applyConstraintFitToSuperview()
+		
+		//activityIndicator?.isHidden = true
+	}
+	
+	func loadWeatherMaps() {
+		
+		
+		WeatherParser.shared.delegate = self
+		
+		WeatherParser.shared.loadWeatherMaps() { (maps) in
+			self.updateWeather(maps: maps)
+		}
+	}
+	
+	func updateWeather(maps: [Weather]) {
+		let sortedMaps = sortWeatherMaps(maps: maps)
+		guard let weatherMaps = create2DimensionalWeatherArray(maps: sortedMaps) else { print("Failed creating Weather Maps"); return }
+		
+		self.weatherMaps = weatherMaps
+		
+		tableView.weatherMaps = weatherMaps
+		
+		updateDisplay()
+	}
+	
+	func create2DimensionalWeatherArray(maps: [Weather]) -> [[Weather]]? {
+		//2 Dimensional array where
+		//X = Days
+		//Y = Time
+		
+		var dayIndex = 0
+		var maps2D: [[Weather]] = []
+		
+		
+		for map in maps {
+			if maps2D.count == 0 {
+				maps2D.append([map])
+			} else if maps2D.count > dayIndex && maps2D[dayIndex].count > 0 {
+				let lastObject = maps2D[dayIndex].last!
+				
+				guard map.dateTime != nil && lastObject.dateTime != nil else { return nil }
+				
+				//Is the current weather map in the same day as the last one?
+				if Calendar.current.isDate(map.dateTime! as Date, inSameDayAs: lastObject.dateTime! as Date) {
+					maps2D[dayIndex].append(map)
+				} else { //Not the same day, create new index
+					dayIndex += 1
+					maps2D.append([map])
+				}
+			}
+		}
+		
+		return maps2D
+	}
+	
+	//Used to sort the maps in case they were saved unsorted
+	func sortWeatherMaps(maps: [Weather]) -> [Weather] {
+		return maps.sorted() {
+			guard $0.dateTime != nil && $1.dateTime != nil else {return false}
+			
+			return ($0.dateTime! as Date) < ($1.dateTime! as Date)
+		}
+	}
+	
 	
 	func updateDisplay() {
+		guard weatherMaps.count > 0 && weatherMaps[0].count > 0 else { return }
+		let currentWeatherModel = weatherMaps[0][0]
 		
-		DispatchQueue.main.async {
-			if self.weatherMaps.count <= 0 {
-				return
-			}
-			self.currentWeatherMap = self.weatherMaps[0]
-			self.condition.attributedText = NSAttributedString(string: (self.currentWeatherMap?.weatherDescription)!)
-			self.iconView.image = self.currentWeatherMap?.icon?.withRenderingMode(.alwaysTemplate)
-			//iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
-			if let temperature = self.currentWeatherMap?.temp(unit: self.tempUnit) {
-				let convertedTemp = Double(round(temperature*10)/10)
-				var degree = ""
-				//self.currentTemp.attributedText = NSAttributedString(string: "\(convertedTemp)°")
-				
-				switch self.tempUnit {
-				case .Celsius:
-					degree = "C"
-				case .Fahrenheit:
-					degree = "F"
-				case .Kelvin:
-					degree = "K"
-					
-				}
-				
-				self.currentTemp.attributedText = NSAttributedString(string: "\(convertedTemp) \(degree)°", attributes: ViraViraFontAttributes.temp)
-			} else {
-				self.currentTemp.attributedText = NSAttributedString(string: "--", attributes: ViraViraFontAttributes.temp)
-			}
-			
-			self.tableView.weatherDays = self.weatherDays
-		}
-	}
-	
-	func addOverlay() {
-		let alert = UIAlertController(title: "Updating", message: "Please Wait", preferredStyle: .alert)
-		//xalert.view.tintColor = UIColor.viraviraGoldColor
+		cityLabel.text = currentWeatherModel.cityName
+		condition.text = currentWeatherModel.weather0Description
+		//Icon
+		iconView.image = currentWeatherModel.weather0Icon != nil ? Weather.icons[currentWeatherModel.weather0Icon!] : nil
 		
-		let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-		activityIndicator.hidesWhenStopped = true
-		activityIndicator.activityIndicatorViewStyle = .white
-		activityIndicator.startAnimating()
+		switch AppInfoParser.temperature {
+		case .Celsius:
+			currentTemp.text = String(format: "%.1f", currentWeatherModel.mainTempCelsius) + "ºC"
+		case .Fahrenheit:
+			currentTemp.text = String(format: "%.1f", currentWeatherModel.mainTempFahrenheit) + "ºF"
+		case .Kelvin:
+			currentTemp.text = String(format: "%.1f", currentWeatherModel.mainTempKelvin) + "ºK"
+		}
 		
-		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(alert: UIAlertAction!) in
-			self.download?.cancel()
-			self.refreshControl.endRefreshing()
-		}))
-		
-		alert.view.addSubview(activityIndicator)
-		DispatchQueue.main.async {
-			self.present(alert, animated: true, completion: nil)
-		}
+		setAttributes()
 	}
-	
-	func displayError(error: URLError) {
-		let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-		DispatchQueue.main.async {
-			self.refreshControl.endRefreshing()
-			self.present(alert, animated: true, completion: nil)
-		}
-	}
-	
-	func removeOverlay() {
-		DispatchQueue.main.async {
-			self.refreshControl.endRefreshing()
-			self.dismiss(animated: true, completion: nil)
-		}
-	}
-	
-	
 	
 	@IBAction func openLink(_ sender: Any) {
 		let url = URL(string: "https://openweathermap.org/")!
@@ -273,6 +203,21 @@ class WeatherController: UIViewController, SWRevealViewControllerDelegate {
 		} else {
 			UIApplication.shared.openURL(url)
 		}
+	}
+}
+
+extension WeatherController : WeatherParserDelegate {
+	
+	func didStartDownload() {
+		
+		activityIndicator?.isHidden = false
+		activityIndicator?.startAnimating()
+	}
+	
+	func didEndDownload() {
+		
+		//activityIndicator?.stopAnimating()
+		//activityIndicator?.isHidden = true
 	}
 }
 

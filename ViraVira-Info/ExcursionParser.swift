@@ -8,9 +8,98 @@
 
 import Foundation
 import MapKit
+import Alamofire
+import CoreData
+
+protocol ExcursionParserDelegate {
+	func didStartDownload()
+	func didEndDownload()
+}
 
 class ExcursionParser {
 	static var shared = ExcursionParser()
+	
+	//Alamofire manager that manages the download of the API
+	private var manager: SessionManager
+	
+	//Delegate
+	public var delegate: ExcursionParserDelegate?
+	
+	//Should we print any errors found to the console?
+	private let kDebugOn: Bool = true
+	
+	//Should we print all processes to the console?
+	private let kDebugDetailOn: Bool = false
+	
+	
+	//JSON Names - These are the corresponding names of the JSON fields from the ViraVira Excursion API
+	
+	private let kJsonVersion = "version"
+	
+	private let kJsonListTitle = "title"
+	private let kJsonListImageURLs = "images"
+	private let kJsonListThumbnailDescription = "thumbnailDescription"
+	private let kJsonListType = "type"
+	
+	private let kJsonListDescription = "description"
+	private let kJsonListDescriptionText = "text"
+	private let kJsonListDescriptionTable = "table"
+	private let kJsonListDescriptionTableCarDistance = "tableCarDistance"
+	private let kJsonListDescriptionTableCarTime = "tableCarTime"
+	private let kJsonListDescriptionTableDifficulty = "tableDifficulty"
+	private let kJsonListDescriptionTableElevationGain = "tableElevationGain"
+	private let kJsonListDescriptionTableEquipment = "tableEquipment"
+	private let kJsonListDescriptionTableExcursionDistance = "tableExcursionDistance"
+	private let kJsonListDescriptionTableExcursionTime = "tableExcursionTime"
+	private let kJsonListDescriptionTablePrice = "tablePrice"
+	
+	
+	init() {
+		manager = SessionManager.default
+	}
+	
+	
+	private func downloadAPI(completion: @escaping (NSDictionary) -> Void) {
+		guard let url = AppInfoParser.excursionApiKey else {
+			if kDebugOn{
+				print("Error: Could not load API Key from .plist")
+			}
+			return
+		}
+		
+		delegate?.didStartDownload()
+		
+		manager.request(url).responseJSON(completionHandler: { response in
+			switch response.result {
+			case .success(let value):
+				completion(value as! NSDictionary)
+				
+			case .failure(let error as NSError):
+				if self.kDebugOn {
+					print("Error: \"\(error.code)\", \(error.localizedDescription)")
+				}
+				
+			default:
+				if self.kDebugOn {
+					print("Unrecognized result received from Alamofire request")
+				}
+			}
+			
+			self.delegate?.didEndDownload()
+		})
+	}
+	
+	
+	public func loadExcursionMaps(completion: @escaping ([Excursion]) -> Void) {
+		
+		var models: [Excursion] = []
+		
+		let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+		
+		//Create a Fetch Request for the Weather Entity from the Weather Context
+		let fetchRequest = NSFetchRequest<Excursion>(entityName: "Excursion")
+	}
+	
 	
 	private var data: Data?
 	private var models: [ExcursionDataModel]?

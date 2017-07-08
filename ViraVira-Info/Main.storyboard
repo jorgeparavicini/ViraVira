@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -94,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="64" width="1024" height="1302"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" translatesAutoresizingMaskIntoConstraints="NO" id="Ocd-j1-fRk" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1965.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1941.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzF-ts-TsH">
                                                 <rect key="frame" x="8" y="8" width="1008" height="40"/>
@@ -117,7 +118,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iau-n3-Cmq">
-                                                <rect key="frame" x="230.5" y="80" width="563" height="36.5"/>
+                                                <rect key="frame" x="230.5" y="80" width="563" height="12.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">The Hacienda Hotel Vira Vira – Relais &amp; Châteaux is set in a beautiful and unique location close to Pucón, Chile. It features a 23ha native park along the shores of the Liucura River and offers an oasis of peace and recreation. The Vira Vira Hotel brings a new concept of vacation to life – we call it “The Elegance of Adventure”.</string>
@@ -130,13 +131,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Villa suites" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Mr-ozI">
-                                                <rect key="frame" x="8" y="148.5" width="1008" height="672"/>
+                                                <rect key="frame" x="8" y="124.5" width="1008" height="672"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ct6-Mr-ozI" secondAttribute="height" multiplier="3:2" id="R18-JM-WCH"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-2f-Fnf">
-                                                <rect key="frame" x="8" y="852.5" width="1008" height="48"/>
+                                                <rect key="frame" x="8" y="828.5" width="1008" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="3Ub-Ar-4hu">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="48"/>
@@ -155,7 +156,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj8-co-dDP">
-                                                <rect key="frame" x="230.5" y="932.5" width="563" height="321"/>
+                                                <rect key="frame" x="230.5" y="908.5" width="563" height="321"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">The “Elegance of Adventure” stands for personal hospitality coupled with unforgettable adventures and excursions. Our Hacienda Hotel offers a wealth of different adventures and excursions tailored to your specific interests. Every day you will meet with our excursion manager to discuss and set your next day activities. Some of our favorite activities include horse trekking in the Cordilleras, hiking in one of the many surrounding Natural Parks, skiing in winter or simply to spend a leisurely day sailing on the Lake Villarrica.
@@ -169,7 +170,7 @@ All Adventures…</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vira Vira Collage" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-hr-Ohv">
-                                                <rect key="frame" x="8" y="1285.5" width="1008" height="672"/>
+                                                <rect key="frame" x="8" y="1261.5" width="1008" height="672"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qSf-hr-Ohv" secondAttribute="height" multiplier="3:2" id="Cfp-Jk-7kX"/>
                                                 </constraints>
@@ -387,11 +388,27 @@ All Adventures…</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-La-NpN" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1302"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-UY-Jy9" userLabel="ParentIndicatorView">
+                                                <rect key="frame" x="564.5" y="8" width="451.5" height="136"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-5W-Y6i" userLabel="IndicatorView">
+                                                        <rect key="frame" x="210" y="52" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="LJg-5W-Y6i" secondAttribute="height" multiplier="1:1" id="7aR-kf-qcL"/>
+                                                            <constraint firstAttribute="width" constant="32" id="G5z-t8-0ua"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="LJg-5W-Y6i" firstAttribute="centerY" secondItem="5cr-UY-Jy9" secondAttribute="centerY" id="fWm-EP-dNr"/>
+                                                    <constraint firstItem="LJg-5W-Y6i" firstAttribute="centerX" secondItem="5cr-UY-Jy9" secondAttribute="centerX" id="poD-ge-gIp"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5y-7o-6k2" userLabel="Description View">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="136"/>
+                                                <rect key="frame" x="468" y="0.0" width="88.5" height="136"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmm-bn-7Oc">
-                                                        <rect key="frame" x="8" y="8" width="1008" height="32"/>
+                                                        <rect key="frame" x="8" y="8" width="72.5" height="32"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="Pucón">
                                                                 <attributes>
@@ -404,12 +421,12 @@ All Adventures…</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-mE-er2" userLabel="Current Condition View">
-                                                        <rect key="frame" x="8" y="48" width="1008" height="21"/>
+                                                        <rect key="frame" x="8" y="48" width="72.5" height="21"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" horizontalHuggingPriority="500" verticalHuggingPriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="FZj-Pd-uB6" userLabel="Center View">
-                                                                <rect key="frame" x="486" y="0.0" width="36" height="21"/>
+                                                                <rect key="frame" x="18" y="0.0" width="36" height="21"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYe-5R-ohS" customClass="WeatherDescriptionLabel" customModule="ViraVira_Info" customModuleProvider="target">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYe-5R-ohS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="7" height="21"/>
                                                                         <attributedString key="attributedText">
                                                                             <fragment content="-">
@@ -447,7 +464,7 @@ All Adventures…</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy0-gD-eES">
-                                                        <rect key="frame" x="8" y="77" width="1008" height="59"/>
+                                                        <rect key="frame" x="8" y="77" width="72.5" height="59"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="--">
                                                                 <attributes>
@@ -500,7 +517,7 @@ All Adventures…</string>
                                                                             <rect key="frame" x="10" y="8.5" width="49" height="57"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="57"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="58"/>
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvi-2L-49q">
@@ -582,13 +599,16 @@ All Adventures…</string>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="em4-pQ-qUz" firstAttribute="top" secondItem="L5y-7o-6k2" secondAttribute="bottom" constant="16" id="85O-nj-HCy"/>
+                                            <constraint firstItem="em4-pQ-qUz" firstAttribute="top" secondItem="5cr-UY-Jy9" secondAttribute="bottom" constant="8" id="CCa-6m-K3h"/>
                                             <constraint firstAttribute="bottom" secondItem="pT2-tZ-d8A" secondAttribute="bottom" constant="8" id="DcD-N0-lP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="5cr-UY-Jy9" secondAttribute="trailing" constant="8" id="GC5-Kp-3z6"/>
+                                            <constraint firstItem="5cr-UY-Jy9" firstAttribute="top" secondItem="J9H-La-NpN" secondAttribute="top" constant="8" id="GnA-Rl-1Dv"/>
                                             <constraint firstItem="pT2-tZ-d8A" firstAttribute="leading" secondItem="J9H-La-NpN" secondAttribute="leading" constant="8" id="IHN-qG-5as"/>
                                             <constraint firstAttribute="trailing" secondItem="pT2-tZ-d8A" secondAttribute="trailing" constant="8" id="KSE-Si-aoa"/>
-                                            <constraint firstAttribute="trailing" secondItem="L5y-7o-6k2" secondAttribute="trailing" id="LhI-wj-00W"/>
-                                            <constraint firstItem="L5y-7o-6k2" firstAttribute="leading" secondItem="J9H-La-NpN" secondAttribute="leading" id="QAW-TR-SHV"/>
                                             <constraint firstItem="em4-pQ-qUz" firstAttribute="leading" secondItem="J9H-La-NpN" secondAttribute="leading" constant="8" id="QwZ-jj-j53"/>
+                                            <constraint firstItem="5cr-UY-Jy9" firstAttribute="leading" secondItem="L5y-7o-6k2" secondAttribute="trailing" constant="8" id="UJ3-s0-jIp"/>
                                             <constraint firstItem="pT2-tZ-d8A" firstAttribute="top" secondItem="em4-pQ-qUz" secondAttribute="bottom" constant="8" id="Wbp-H8-7xb"/>
+                                            <constraint firstItem="L5y-7o-6k2" firstAttribute="centerX" secondItem="J9H-La-NpN" secondAttribute="centerX" id="X3e-pF-wQ7"/>
                                             <constraint firstAttribute="trailing" secondItem="em4-pQ-qUz" secondAttribute="trailing" constant="8" id="cmG-5Q-KCO"/>
                                             <constraint firstItem="L5y-7o-6k2" firstAttribute="top" secondItem="J9H-La-NpN" secondAttribute="top" id="mRn-oS-XEH"/>
                                         </constraints>
@@ -615,6 +635,7 @@ All Adventures…</string>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Weather" id="aVV-cA-6VZ"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="LJg-5W-Y6i" id="av6-8S-Yjm"/>
                         <outlet property="cityLabel" destination="cmm-bn-7Oc" id="eCI-uC-xW7"/>
                         <outlet property="condition" destination="yYe-5R-ohS" id="q2X-DS-Yvl"/>
                         <outlet property="currentTemp" destination="sy0-gD-eES" id="LAs-PZ-Vzf"/>
@@ -627,7 +648,7 @@ All Adventures…</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaM-va-JO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2520.8000000000002" y="1280.5097451274364"/>
+            <point key="canvasLocation" x="2520.703125" y="1280.3806734992679"/>
         </scene>
         <!--Excursions-->
         <scene sceneID="LgZ-z2-wkR">
