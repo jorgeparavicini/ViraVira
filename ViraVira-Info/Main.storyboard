@@ -306,7 +306,7 @@ All Adventures…</string>
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjJ-PF-4mL">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjJ-PF-4mL">
                                             <rect key="frame" x="24" y="8" width="105" height="34"/>
                                             <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                             <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -517,7 +517,7 @@ All Adventures…</string>
                                                                             <rect key="frame" x="10" y="8.5" width="49" height="57"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="58"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="57"/>
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvi-2L-49q">
@@ -816,33 +816,14 @@ All Adventures…</string>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ps3-hv-dHn" customClass="ExcursionImageDescription" customModule="ViraVira_Info" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="251.5" width="359" height="50"/>
-                                                        <color key="backgroundColor" red="0.1058823529" green="0.070588235289999995" blue="0.01176470588" alpha="0.50860333588957052" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="C79-TG-0Id"/>
-                                                        </constraints>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <color key="textColor" red="0.57647058819999997" green="0.45882352939999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
                                                 </subviews>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="ksJ-qg-aeX" secondAttribute="trailing" id="J0B-ZA-YLl"/>
                                                     <constraint firstAttribute="bottom" secondItem="ksJ-qg-aeX" secondAttribute="bottom" id="TQr-i6-F5D"/>
-                                                    <constraint firstItem="ps3-hv-dHn" firstAttribute="bottom" secondItem="ksJ-qg-aeX" secondAttribute="bottom" id="V3s-Ef-hu8"/>
-                                                    <constraint firstItem="ksJ-qg-aeX" firstAttribute="leading" secondItem="ps3-hv-dHn" secondAttribute="leading" id="W80-m0-MqI"/>
-                                                    <constraint firstItem="ksJ-qg-aeX" firstAttribute="trailing" secondItem="ps3-hv-dHn" secondAttribute="trailing" id="WIv-wm-EM2"/>
                                                     <constraint firstItem="ksJ-qg-aeX" firstAttribute="top" secondItem="BLy-FR-UxK" secondAttribute="top" id="kGp-Dy-3xH"/>
                                                     <constraint firstItem="ksJ-qg-aeX" firstAttribute="leading" secondItem="BLy-FR-UxK" secondAttribute="leading" id="qjl-H7-e6Z"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="subviews">
-                                                        <exclude reference="ps3-hv-dHn"/>
-                                                    </mask>
-                                                </variation>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="IHU-wx-VuC" appends="YES" id="ix1-BX-zqf"/>
                                                 </connections>
@@ -953,7 +934,6 @@ All Adventures…</string>
                         <outlet property="collectionView" destination="ksJ-qg-aeX" id="A5C-5l-brv"/>
                         <outlet property="contentView" destination="gwn-Ee-6Ra" id="x0m-92-tkF"/>
                         <outlet property="descriptionView" destination="WXj-uY-Tme" id="Jpa-s1-aXi"/>
-                        <outlet property="excursionImageDescriptionView" destination="ps3-hv-dHn" id="Ehr-lf-deu"/>
                         <outlet property="excursionTitle" destination="3E5-E2-RMW" id="JID-Zc-zP0"/>
                         <outlet property="mapButton" destination="Kn9-UU-YUS" id="lCl-uC-e5H"/>
                         <outlet property="separator" destination="s7g-xK-xO7" id="9EP-OY-gYh"/>
@@ -1003,7 +983,7 @@ All Adventures…</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k7M-tn-4je">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="k7M-tn-4je">
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7M-tn-4je" id="ceC-F6-XPN">

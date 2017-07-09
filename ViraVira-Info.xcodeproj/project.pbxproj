@@ -23,7 +23,6 @@
 		CF22A5F81EE362F90075E5BB /* ExcursionSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF22A5F71EE362F90075E5BB /* ExcursionSectionHeader.xib */; };
 		CF26E45F1EDC90AA002FA450 /* ExcursionImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26E45E1EDC90AA002FA450 /* ExcursionImageDownloader.swift */; };
 		CF27929D1E325EC400805C19 /* ExcursionImageDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF27929C1E325EC400805C19 /* ExcursionImageDescription.swift */; };
-		CF2C5DDC1D3CED4600E47BB2 /* SpaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C5DDB1D3CED4600E47BB2 /* SpaController.swift */; };
 		CF30050E1ECCBE92007C6FFF /* ExcursionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30050D1ECCBE92007C6FFF /* ExcursionParser.swift */; };
 		CF350E291E9AB82400949761 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF350E281E9AB82400949761 /* InfoTableViewCell.swift */; };
 		CF350E2D1E9AC17100949761 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF350E2B1E9AC17100949761 /* WellnessViewController.swift */; };
@@ -141,7 +140,6 @@
 		CF22A5F71EE362F90075E5BB /* ExcursionSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExcursionSectionHeader.xib; sourceTree = "<group>"; };
 		CF26E45E1EDC90AA002FA450 /* ExcursionImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionImageDownloader.swift; sourceTree = "<group>"; };
 		CF27929C1E325EC400805C19 /* ExcursionImageDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionImageDescription.swift; sourceTree = "<group>"; };
-		CF2C5DDB1D3CED4600E47BB2 /* SpaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaController.swift; sourceTree = "<group>"; };
 		CF30050D1ECCBE92007C6FFF /* ExcursionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcursionParser.swift; sourceTree = "<group>"; };
 		CF350E281E9AB82400949761 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		CF350E2B1E9AC17100949761 /* WellnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
@@ -261,14 +259,6 @@
 				0724DFA0693AE714A49D535A /* Pods-ViraVira-InfoTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CF2C5DDD1D3CEDC300E47BB2 /* Spa */ = {
-			isa = PBXGroup;
-			children = (
-				CF2C5DDB1D3CED4600E47BB2 /* SpaController.swift */,
-			);
-			name = Spa;
 			sourceTree = "<group>";
 		};
 		CF350E2A1E9AC15300949761 /* Sub Views */ = {
@@ -434,7 +424,6 @@
 				CF74541C1D3E4ADB008D8B15 /* Information */,
 				CF98EADD1E27E40D00559A16 /* Weather */,
 				CFEF1DF21D3AD3C40050357F /* Excursion */,
-				CF2C5DDD1D3CEDC300E47BB2 /* Spa */,
 				CFEF1DF01D3AD3900050357F /* Follow Us */,
 				CFEA78991E7483DA00C45A82 /* Settings */,
 				CF8639201D2D24F900B126D4 /* Assets.xcassets */,
@@ -909,7 +898,6 @@
 				CF1087111E3FE2FE0087F6A0 /* UIImage+Alpha.swift in Sources */,
 				CFDC93451E421B1F00615C0E /* ImageGallaryCollectionViewCell.swift in Sources */,
 				CF54DC621E50C6ED004A944E /* JPMap.swift in Sources */,
-				CF2C5DDC1D3CED4600E47BB2 /* SpaController.swift in Sources */,
 				CF6CDB271E3BAFB4007A8678 /* TextAttachment.swift in Sources */,
 				CFD7EEBC1D3A7E1B002DEA14 /* FollowUsViewController.swift in Sources */,
 				CFE4DF181E4ABF96000D07D6 /* MenuTableViewCell.swift in Sources */,
@@ -1043,7 +1031,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1085,7 +1073,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
